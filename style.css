@@ -1,10 +1,60 @@
+body {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 header {
   background-image: url('images/background_header.png');
   height: 300px;
+  margin-top: -25px;
+  margin-left: -10px;
+  margin-right: -10px;
+  display: flex;
+}
+
+.mainTitle {
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 60px;
+  margin: 90px 90px 0px 90px;
+}
+h2 {
+  font-size: 24px;
+  margin-top: -10px;
+}
+h3 {
+  font-size: 40px;
+}
+
+.contact {
+  text-align: right;
   
 }
 
 .body {
   background-image: url('images/background_body.png');
-  height: 1460px;
+  height: 100%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.main {  
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  
+}
+
+.presentation, .cv, .projets {
+  text-align: center;
+  width: 775px;
+  
+}
+
+ul {
+  list-style-type: none;
 }
