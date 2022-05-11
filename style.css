@@ -1,7 +1,10 @@
 header {
   background-image: url('images/background_header.png');
+  height: 300px;
+  
 }
 
 .body {
   background-image: url('images/background_body.png');
+  height: 1460px;
 }
