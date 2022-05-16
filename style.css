@@ -5,8 +5,11 @@ body {
 
 header {
   background-image: url('images/background_header.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 300px;
-  margin-top: -25px;
+  width: 100%;
+  margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
   display: flex;
@@ -35,8 +38,9 @@ h3 {
 }
 
 .body {
-  background-image: url('images/background_body.png');
-  height: 100%;
+  background-image: url('images/background_body.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;   
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -57,4 +61,28 @@ nav {
 
 ul {
   list-style-type: none;
+}
+
+@media screen and (min-width: 576px) { /**phones**/
+
+}
+
+@media screen and (min-width: 834px) { /**tablettes**/
+
+}
+
+@media screen and (min-width: 1024px) { /**tablettes**/
+
+}
+
+@media screen and (min-width: 1280px) { /**small screens**/
+
+}
+
+@media screen and (min-width: 1366px) { /**medium screens**/
+  
+}
+
+@media screen and (min-width: 1920px) { /**big screens**/
+
 }
