@@ -8,49 +8,40 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   height: 300px;
-  width: 100%;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  display: flex;
-}
-
-.mainTitle {
-  text-align: center;
-
 }
 
 h1 {
-  font-size: 60px;
-  margin: 90px 90px 0px 90px;
+  font-size: 50px;
 }
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: -10px;
 }
 h3 {
   font-size: 40px;
 }
 
-.contact {
-  text-align: right;
-  
+.navbar-brand {
+ margin-left: 100px;
+}
+
+.navbar-nav {
+  margin-top: 80px;
+}
+
+.bi {
+  color: black;
 }
 
 .body {
   background-image: url('images/background_body.png') ;
   background-repeat: no-repeat;
-  background-size: cover;   
-  margin-left: -10px;
-  margin-right: -10px;
+  background-size: cover;
 }
+
 .main {  
   display: flex;
   justify-content: center;
-}
-
-nav {
-  
 }
 
 .presentation, .cv, .projets {
