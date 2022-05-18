@@ -14,7 +14,7 @@
           
         <a class="navbar-brand p-0 me-0 me-lg-2" href="index.html" >
           <h1>CAROLINE VÉZINA</h1>
-          <h2>DÉVELOPPEUR WEB spécialisation FRONT-END</h2>
+          <h3>DÉVELOPPEUR WEB spécialisation FRONT-END</h3>
         </a>     
     
         <div>  
@@ -44,22 +44,32 @@
       
     </header> 
 
-  <div class="body">
+  <div class="body container-fluid">
 
     <nav>
-      <ul>
-        <li><a href="index.html">présentation</a></li>
-        <li><a href="cv.html" >curriculum vitae</a></li>
-        <li><a href="projets.html">projets</a></li>
-        <li><a href="projets.html">développement front-end</a></li>
-        <li><a href="" title="à venir">développement back-end</a></li>
-        <li><a href="" title="à venir">développement full stack</a></li>
-      </ul>
+      <div class="dropdown">
+        <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg> 
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="index.html">présentation</a></li>
+          <li><a class="dropdown-item" href="cv.html" >curriculum vitae</a></li>
+          <li><a class="dropdown-item" href="projets.html">projets :</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="projets.html">développement front-end</a></li>
+          <li><a class="dropdown-item disabled" href="projets.html">développement back-end</a></li>
+          <li><a class="dropdown-item disabled" href="projets.html">développement full stack</a></li>
+        </ul>
+      </div>
+
     </nav>
 
     <div class="main">
       <div class="cv">  
-        <h3>curriculum vitae</h3>
+        <h2>curriculum vitae</h2>
     
 
       </div>

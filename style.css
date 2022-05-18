@@ -1,42 +1,58 @@
-body {
-  font-size: 20px;
+body, html {
+  font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
 }
 
 header {
-  background-image: url('images/background_header.png');
-  background-repeat: no-repeat;
+  background: url('images/background_header.png') no-repeat;
   background-size: contain;
-  height: 300px;
+  height: 32%;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: calc(2rem + 1.5vw);
 }
 h2 {
-  font-size: 20px;
-  margin-top: -10px;
+  font-size: calc(1.5rem + 0.5vw);
+  text-align: center;
+  margin-bottom: 3%;
 }
 h3 {
-  font-size: 40px;
+  font-size: calc(0.9rem + 0.5vw);
+  margin-top: -0.9rem;
 }
 
 .navbar-brand {
- margin-left: 100px;
+ margin-left: 3rem;
+ color: white;
 }
+.navbar-brand:hover {
+  color: #1A3B3A;
+ }
 
 .navbar-nav {
-  margin-top: 80px;
+  margin-top: 200%;
 }
 
-.bi {
-  color: black;
+.bi, .btn, a {
+  color: #1A3B3A;
+}
+.bi:hover, .btn:hover, a:hover {
+  color: #67d3d1;
 }
 
 .body {
-  background-image: url('images/background_body.png') ;
-  background-repeat: no-repeat;
+  background: url('images/background_body.png') no-repeat;
   background-size: cover;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+}
+ul {
+  list-style-type: none;
 }
 
 .main {  
@@ -44,36 +60,29 @@ h3 {
   justify-content: center;
 }
 
-.presentation, .cv, .projets {
-  text-align: center;
-  width: 775px;
-  
+.presentation, .cv {
+  text-align: left;
+  width: 40%;  
+}
+.signature {
+  width: 15%;
+  margin-left: 10%;
 }
 
-ul {
-  list-style-type: none;
+.projets {
+  font-size: 14px;
+  width: 50%;
 }
 
-@media screen and (min-width: 576px) { /**phones**/
-
+.card-header {
+  text-align: right;
 }
 
-@media screen and (min-width: 834px) { /**tablettes**/
-
+.card {
+  margin-bottom: 8%;
+  border-color: #48A19F;
 }
-
-@media screen and (min-width: 1024px) { /**tablettes**/
-
-}
-
-@media screen and (min-width: 1280px) { /**small screens**/
-
-}
-
-@media screen and (min-width: 1366px) { /**medium screens**/
-  
-}
-
-@media screen and (min-width: 1920px) { /**big screens**/
-
+svg, img {
+  vertical-align: bottom;
+  color: #1A3B3A;
 }

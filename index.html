@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
   <title>Caroline Vézina - présentation</title>
 </head>
 <body>
-  <header class="navbar bd-navbar sticky-top">
+  <header class="navbar bd-navbar sticky-top container-fluid">
     <nav class="container-fluid bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
         
       <a class="navbar-brand p-0 me-0 me-lg-2" href="index.html" >
         <h1>CAROLINE VÉZINA</h1>
-        <h2>DÉVELOPPEUR WEB spécialisation FRONT-END</h2>
+        <h3>DÉVELOPPEUR WEB spécialisation FRONT-END</h3>
       </a>     
   
       <div>  
@@ -44,27 +44,39 @@
     
   </header> 
 
-  <div class="body">
+  <div class="body container-fluid">
 
-    <nav >
-      <ul>
-        <li><a href="index.html">présentation</a></li>
-        <li><a href="cv.html" >curriculum vitae</a></li>
-        <li><a href="projets.html">projets</a></li>
-        <li><a href="projets.html">développement front-end</a></li>
-        <li><a href="" title="à venir">développement back-end</a></li>
-        <li><a href="" title="à venir">développement full stack</a></li>
-      </ul>
-    </nav>  
+    <nav>
+      <div class="dropdown">
+        <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg> 
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="index.html">présentation</a></li>
+          <li><a class="dropdown-item" href="cv.html" >curriculum vitae</a></li>
+          <li><a class="dropdown-item" href="projets.html">projets :</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="projets.html">développement front-end</a></li>
+          <li><a class="dropdown-item disabled" href="projets.html">développement back-end</a></li>
+          <li><a class="dropdown-item disabled" href="projets.html">développement full stack</a></li>
+        </ul>
+      </div>
+
+    </nav>
 
     <div class="main">
       <div class="presentation">
-        <h3>présentation</h3>
+        <h2>présentation</h2>
         <p>Après plus de neuf ans d'expérience en tant que dessinatrice en aménagement intérieur, mon parcours est passé par la planification de travaux ainsi que la gestion d'immeuble en copropriété pendant quatre années.  Ces expériences mon permis de développer certaines aptitudes, notamment la créativité, l'esprit et le travail d'équipe, ainsi que le sens de l'organisation.</p>
 
         <p>À la suite de mon déménagement en France, j'ai voulu faire un nouveau départ professionnel.  Étant curieuse de nature, j'aime apprendre de nouvelle chose et je m'adapte facilement à un nouvel environnement. Ayant toujours eu un intérêt pour l'informatique et le design, j'ai donc choisi une reconversion en développement web, spécialisation Front-End.</p>
 
         <p>Je suis à la recherche d'un stage pour cet été (entre juin et octobre).  Puisque mes études sont toujours en cours, mes connaissances demeurent en apprentissage; je cherche donc à travailler pour une entreprise dynamique où je développerai mes compétences liées à ce métier avec le soutien de collègues expérimentés.</p>
+
+        <img class="signature" src="images/signature.png" alt="signature" >
        
       </div>
     </div>
