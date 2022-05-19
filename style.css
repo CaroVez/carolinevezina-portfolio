@@ -62,10 +62,12 @@ ul {
   text-align: left;
   font-size: 0.8vw;
   width: 40%;
+  background-color: rgba(255, 255, 255, 30%);
 }
 .signature {
   width: 15%;
   margin-left: 10%;
+  margin-top: 5%;
 }
 
 .projets, .cv {
@@ -129,10 +131,6 @@ svg, img {
   header {
     height: 20%;
   }
-  svg, img {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -156,10 +154,21 @@ svg, img {
   header {
     height: 12%;
   }
+  .body {
+    height: 100%;  
+  }
+  .signature {
+    width: 30%;
+    margin-left: 0%;
+  }
+}
+
+/**
+svg, img {
+  width: 24px;
+  height: 24px;
+}
   svg, img {
     width: 16px;
     height: 16px;
   }
-  
-}
-
