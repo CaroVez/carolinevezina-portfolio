@@ -55,6 +55,10 @@ nav {
 ul {
   list-style-type: none;
 }
+.bullet {
+  list-style-type: disc;
+  margin-left: 5%;
+}
 
 .main {  
   display: flex;
@@ -110,6 +114,28 @@ svg, img {
   margin-top: 1vw;
 }
 
+.accordion-item {
+  border: 1px solid #BA7954;
+  background: rgba(255, 255, 255, 30%);
+}
+.accordion-button {
+  color: #7A5037;
+  font-size: inherit;
+  background: rgba(255, 255, 255, 30%);
+}
+.accordion-button:focus {
+  box-shadow: inherit;
+}
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background: #BA7954;
+  color: white;
+}
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0%) invert(100%);
+}
+
+
 
 @media screen and (max-width: 1400px) {
   .projets, .cv, .presentation {
@@ -126,7 +152,7 @@ svg, img {
   h1 {
     font-size: 4vw;
   }
-  h2 {
+  h2, .dropdown-item {
     font-size: 3vw;
   }
   h3 {
