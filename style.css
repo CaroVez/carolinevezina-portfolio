@@ -124,6 +124,7 @@ svg, img {
 .accordion-button {
   color: #7A5037;
   background: rgba(255, 255, 255, 30%);
+  font-size: inherit;
 }
 .accordion-button:focus {
   box-shadow: inherit;
