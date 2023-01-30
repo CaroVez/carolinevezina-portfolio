@@ -26,6 +26,9 @@ h3 {
 h4 {
   font-size: 1.6vw;
 }
+h5 {
+  font-size: 1.2vw;
+}
 
 .navbar-brand {
  margin-left: 4vw;
@@ -147,12 +150,34 @@ h4 svg {
   filter: brightness(0%) invert(100%);
 }
 
+video {
+  border: 1px solid black;
+}
 
 
 @media screen and (max-width: 1400px) {
   .projets, .cv, .presentation {
     width: 70%;
     font-size: 1.4vw;
+  }
+  h5 {
+    font-size: 1.4vw;
+  }
+  video {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .projets, .cv, .presentation {
+    width: 70%;
+    font-size: 1.4vw;
+  }
+  h5 {
+    font-size: 1.4vw;
+  }
+  video {
+    width: 550px;
   }
 }
 
@@ -173,6 +198,9 @@ h4 svg {
   h4 {
     font-size: 1.8vw;
   }
+  h5 {
+    font-size: 2vw;
+  }
   header {
     height: 20%;
   }
@@ -180,6 +208,9 @@ h4 svg {
     width: 24px;
     height: 24px;
   } 
+  video {
+    width: 550px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -203,6 +234,9 @@ h4 svg {
   h4 {
     font-size: 3vw;
   }
+  h5 {
+    font-size: 3vw;
+  }
   header {
     height: 12%;
   }
@@ -214,6 +248,9 @@ h4 svg {
     width: 16px;
     height: 16px;
   } 
+  video {
+    width: 330px;
+  }
 }
 
 /**
