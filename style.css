@@ -90,6 +90,10 @@ ul, a {
   width: 70%;
 }
 
+.competences {
+  display: flex;
+}
+
 .card-header {
   text-align: right;
   border-color: white;
