@@ -27,7 +27,7 @@ h4 {
   font-size: 1.6vw;
 }
 h5 {
-  font-size: 1.2vw;
+  font-size: 1vw;
 }
 
 .navbar-brand {
@@ -152,8 +152,8 @@ h4 svg {
 
 video {
   border: 1px solid black;
+  width: 1000px;
 }
-
 
 @media screen and (max-width: 1400px) {
   .projets, .cv, .presentation {
