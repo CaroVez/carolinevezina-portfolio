@@ -162,7 +162,7 @@ video {
 @media screen and (max-width: 1400px) {
   .projets, .cv, .presentation {
     width: 70%;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
   }
   h5 {
     font-size: 1.4vw;
