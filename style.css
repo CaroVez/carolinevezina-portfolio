@@ -47,10 +47,11 @@ h5 {
 }
 
 .body {
+  margin-top: 17%;
   background: url('images/background_body.png') no-repeat;
   background-size: cover;
 }
-.body-presentation {
+.body-presentation, .body-fe {
   height: 100%;
 }
 
@@ -164,6 +165,15 @@ video {
     width: 70%;
     font-size: 1.2vw;
   }
+  header {
+    height: 27%;
+  }
+  .navbar-nav {
+    margin-top: 13vh;
+  }
+  .body {
+    margin-top: 17%;
+  }
   h5 {
     font-size: 1.4vw;
   }
@@ -172,10 +182,19 @@ video {
   }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1080px) {
   .projets, .cv, .presentation {
     width: 70%;
     font-size: 1.4vw;
+  }
+  header {
+    height: 23%;
+  }
+  .navbar-nav {
+    margin-top: 15vh;
+  }
+  .body {
+    margin-top: 20%;
   }
   h5 {
     font-size: 1.4vw;
@@ -206,7 +225,13 @@ video {
     font-size: 2vw;
   }
   header {
-    height: 20%;
+    height: 15%;
+  }
+  .navbar-nav {
+    margin-top: 12vh;
+  }
+  .body {
+    margin-top: 20%;
   }
   h5 img, h5 svg {
     width: 24px;
@@ -243,6 +268,12 @@ video {
   }
   header {
     height: 12%;
+  }
+  .navbar-nav {
+    margin-top: 10vh;
+  }
+  .body {
+    margin-top: 25%;
   }
   .signature {
     width: 30%;
