@@ -51,7 +51,7 @@ h5 {
   background: url('images/background_body.png') no-repeat;
   background-size: cover;
 }
-.body-presentation, .body-fe {
+.body-presentation {
   height: 100%;
 }
 
