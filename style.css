@@ -1,7 +1,6 @@
 body, html {
   font-size: 1vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
 }
 
 header {
@@ -47,12 +46,9 @@ h5 {
 }
 
 .body {
-  margin-top: 17%;
   background: url('images/background_body.png') no-repeat;
   background-size: cover;
-}
-.body-presentation {
-  height: 100%;
+  min-height: 100vh;
 }
 
 nav {
