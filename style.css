@@ -10,7 +10,8 @@ header {
 }
 
 h1 {
-  font-size: 3.5vw;
+  /*font-size: 3.5vw;*/
+  font-size: 4.1vw;
 }
 h2 {
   font-size: 1.8vw;
@@ -86,6 +87,9 @@ ul, a {
 .projets, .cv {
   font-size: 0.8vw;
   width: 70%;
+}
+.projets>p {
+  text-align: center;
 }
 
 .competences {
@@ -207,7 +211,7 @@ video {
     font-size: 2vw;
   }
   h1 {
-    font-size: 4vw;
+    font-size: 4.9vw;
   }
   h2, .dropdown-item {
     font-size: 3vw;
@@ -249,7 +253,7 @@ video {
     text-align: center;
   }
   h1 {
-    font-size: 5vw;
+    font-size: 6vw;
   }
   h2, .dropdown-item {
     font-size: 4vw;
