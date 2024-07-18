@@ -26,7 +26,7 @@ header {
   height: 50px;
 }
 
-h1, h2, h3, h4, .alt {
+h1, h2, h3, h4, h5, .alt {
   font-family: 'MuseoModerno';
 }
 .alt {
