@@ -276,8 +276,11 @@ ul .sous-menu {
 }
 .wrapper-projet img {
   width: 100%;
-  object-fit: cover;
-  object-position: 50% top;
+  object-fit: co;
+}
+.wrapper-projet .tools img {
+  width: inherit;
+  object-fit: inherit;
 }
 .wrapper-projet .text {
   color: #7A5037;
@@ -287,22 +290,23 @@ ul .sous-menu {
   margin-bottom: -2vh;
 }
 
-.wrapper-projet .title {
-  grid-column: 1;
-  grid-row: 1;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .wrapper-projet .description {
-  grid-column: 2 / 5;
+  grid-column: 1 / 5;
   grid-row: 1;
-  text-align: justify;
   color: #7A5037;
+  text-align: center;
 }
 .wrapper-projet .description img {
   width: inherit;
   object-fit: contain;
+}
+.wrapper-projet .description .ecole {
+  color: #377a79;
+  font-weight: bold;
+}
+.wrapper-projet .description .link {
+  border-top: 1px solid #377a79;
+  padding-top: 2vh;
 }
 .wrapper-projet .tools {
   grid-column: 1 / 5;
@@ -324,6 +328,13 @@ ul .sous-menu {
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: 250px 500px;
+  }
+
+  .wrapper-projet .tools > img {
+    scale: inherit; opacity: inherit;
+    animation: inherit;
+    animation-timeline: inherit;
+    animation-range: inherit;
   }
 
   @keyframes fade-in {
@@ -442,92 +453,96 @@ ul .sous-menu {
 
 /* ##### CHARLES CANTIN ##### */
 
-.charles .title {
-  background-image: url("./images/charlescantin/logo.png");
-}
-
-.charles .mobilew-text {
+.charles .logo-text {
   grid-column: 1 / 5;
   grid-row: 3;
+}
+.charles .logo {
+  grid-column: 1 / 5;
+  grid-row: 4;
+}
+.charles .mobilew-text {
+  grid-column: 1 / 5;
+  grid-row: 5;
 }
 .charles .mobilew1 img, .charles .mobilew2 img, .charles .mobilew3 img, .charles .mobilew4 img {
   border: solid 1px #1A3B3A;
 }
 .charles .mobilew1 {
   grid-column: 1 / 3;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobilew2 {
   grid-column: 3 / 5;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobilew3 {
   grid-column: 1 / 3;
-  grid-row: 5;
+  grid-row: 7;
 }
 .charles .mobilew4 {
   grid-column: 3 / 5;
-  grid-row: 5;
+  grid-row: 7;
 }
 .charles .mobile-text {
   grid-column: 1 / 5;
-  grid-row: 6;
+  grid-row: 8;
 }
 .charles .mobile1 {
   grid-column: 1 / 3;
-  grid-row: 7;
+  grid-row: 9;
 }
 .charles .mobile2 {
   grid-column: 3 / 5;
-  grid-row: 7;
+  grid-row: 9;
 }
 .charles .mobile3 {
   grid-column: 1 / 3;
-  grid-row: 8;
+  grid-row: 10;
 }
 .charles .mobile4 {
   grid-column: 3 / 5;
-  grid-row: 8;
+  grid-row: 10;
 }
 .charles .desktopw-text {
   grid-column: 1 / 5;
-  grid-row: 9;
+  grid-row: 11;
 }
 .charles .desktopw1 {
   grid-column: 1 / 5;
-  grid-row: 10;
+  grid-row: 12;
 }
 .charles .desktopw2 {
   grid-column: 1 / 5;
-  grid-row: 11;
+  grid-row: 13;
 }
 .charles .desktopw3 {
   grid-column: 1 / 5;
-  grid-row: 12;
+  grid-row: 14;
 }
 .charles .desktopw4 {
   grid-column: 1 / 5;
-  grid-row: 13;
+  grid-row: 15;
 }
 .charles .desktop-text {
   grid-column: 1 / 5;
-  grid-row: 14;
+  grid-row: 16;
 }
 .charles .desktop1 {
   grid-column: 1 / 5;
-  grid-row: 15;
+  grid-row: 17;
 }
 .charles .desktop2 {
   grid-column: 1 / 5;
-  grid-row: 16;
+  grid-row: 18;
 }
 .charles .desktop3 {
   grid-column: 1 / 5;
-  grid-row: 17;
+  grid-row: 19;
 }
 .charles .desktop4 {
   grid-column: 1 / 5;
-  grid-row: 18;
+  grid-row: 20;
 }
 
 
@@ -800,6 +815,24 @@ ul .sous-menu {
 .wrapper-projet .text {
   font-size: 1rem;
 }
+.wrapper-projet .description {
+  text-align: justify;
+}
+.wrapper-projet .description .title-mobile {
+  display: none;
+}
+.wrapper-projet .title {
+  grid-column: 1;
+  grid-row: 1;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.wrapper-projet .description {
+  grid-column: 2 / 5;
+  grid-row: 1;
+  color: #7A5037;
+}
 
 
 /* ##### TERRE DE THÉS ##### */
@@ -889,81 +922,88 @@ ul .sous-menu {
 
 /* ##### CHARLES CANTIN ##### */
 
+.charles .title {
+  background-image: url("./images/charlescantin/vignette.jpg");
+}
+.charles .logo {
+  grid-column: 2 / 4;
+  grid-row: 4;
+}
 .charles .mobilew1 {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobilew2 {
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobilew3 {
   grid-column: 3;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobilew4 {
   grid-column: 4;
-  grid-row: 4;
+  grid-row: 6;
 }
 .charles .mobile-text {
   grid-column: 1 / 5;
-  grid-row: 5;
+  grid-row: 7;
 }
 .charles .mobile1 {
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 8;
 }
 .charles .mobile2 {
   grid-column: 2;
-  grid-row: 6;
+  grid-row: 8;
 }
 .charles .mobile3 {
   grid-column: 3;
-  grid-row: 6;
+  grid-row: 8;
 }
 .charles .mobile4 {
   grid-column: 4;
-  grid-row: 6;
+  grid-row: 8;
 }
 .charles .desktopw-text {
   grid-column: 1 / 5;
-  grid-row: 7;
+  grid-row: 9;
 }
 .charles .desktopw1 {
   grid-column: 1 / 5;
-  grid-row: 8;
+  grid-row: 10;
 }
 .charles .desktopw2 {
   grid-column: 1 / 5;
-  grid-row: 9;
+  grid-row: 11;
 }
 .charles .desktopw3 {
   grid-column: 1 / 5;
-  grid-row: 10;
+  grid-row: 12;
 }
 .charles .desktopw4 {
   grid-column: 1 / 5;
-  grid-row: 11;
+  grid-row: 13;
 }
 .charles .desktop-text {
   grid-column: 1 / 5;
-  grid-row: 12;
+  grid-row: 14;
 }
 .charles .desktop1 {
   grid-column: 1 / 5;
-  grid-row: 13;
+  grid-row: 15;
 }
 .charles .desktop2 {
   grid-column: 1 / 5;
-  grid-row: 14;
+  grid-row: 16;
 }
 .charles .desktop3 {
   grid-column: 1 / 5;
-  grid-row: 15;
+  grid-row: 17;
 }
 .charles .desktop4 {
   grid-column: 1 / 5;
-  grid-row: 16;
+  grid-row: 18;
 }
 
 
