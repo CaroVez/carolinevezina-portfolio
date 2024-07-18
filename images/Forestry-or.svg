@@ -1,9 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 80" width="77" height="80">
-	<title>Forestry-black</title>
-	<defs>
-		<image  width="76" height="74" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABKAQMAAAArACB1AAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAunlU/1WVWwAAAAJ0Uk5TAP9bkSK1AAABB0lEQVR4nN2SsW3DMBBFT2DBJsC1LgJwESPczEdP4JW4gVdgkCKlWbIg+PNPQawFkiYSBD1Bp4cHUiJiIqJN/PhljMRQiChatMUqsqGmqs1HAlompC4S0XPXlomKkYY240DC1KkN/CxjxaXvoMyAAP2Aa4Erbp/LtUDF/TFda9bsgUHtstwz4NppaSTAtcOoxa7tFlfErm0WKMZWhKYrT4QqvBU+rtiELyuHpna5RKb3PJh+VnSKmS+nhOG9np4x2bunGxZ793RGbrh5uvcW3J/p9nims/cnPR3peqTHIz0c6dT4ilTbKF77mptf05F7YZKplQvhTXzN5Ux8/d6sE/Hlj36C/4RffA0HWBaBN9AAAAAASUVORK5CYII="/>
-	</defs>
-	<style>
-	</style>
-	<use id="Background" href="#img1" x="0" y="3"/>
-</svg>
