@@ -227,30 +227,30 @@ ul .sous-menu {
   grid-row: 2;
   background-image: url("./images/charlescantin/vignette.jpg");
 }
-.av-vignette {
-  grid-column: 1;
-  grid-row: 3;
-  background-image: url("./images/av/vignette.jpg");
-}
-.music-vignette {
-  grid-column: 1;
-  grid-row: 4;
-  background-image: url("./images/oursupermusicapp/logo.png");
-}
-.dice-vignette {
-  grid-column: 1;
-  grid-row: 5;
-  background-image: url("./images/dicegame/vignette.png");
-}
 .caroline-vignette {
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 3;
   background-image: url("./images/carolinealetranger/logo.JPG");
 }
 .agrume-vignette {
   grid-column: 1;
-  grid-row: 7;
+  grid-row: 4;
   background-image: url("./images/lagrumeindigo/gym.jpg");
+}
+.av-vignette {
+  grid-column: 1;
+  grid-row: 5;
+  background-image: url("./images/av/vignette.jpg");
+}
+.dice-vignette {
+  grid-column: 1;
+  grid-row: 6;
+  background-image: url("./images/dicegame/vignette.png");
+}
+.music-vignette {
+  grid-column: 1;
+  grid-row: 7;
+  background-image: url("./images/oursupermusicapp/logo.png");
 }
 .clipboard-vignette {
   grid-column: 1;
@@ -307,6 +307,7 @@ ul .sous-menu {
 .wrapper-projet .description .link {
   border-top: 1px solid #377a79;
   padding-top: 2vh;
+  height: 2rem;
 }
 .wrapper-projet .tools {
   grid-column: 1 / 5;
@@ -776,15 +777,15 @@ ul .sous-menu {
     grid-column: 1;
     grid-row: 1;
   }
-  .caroline-vignette {
+  .charles-vignette {
     grid-column: 2;
     grid-row: 1;
   }
-  .agrume-vignette {
+  .caroline-vignette {
     grid-column: 3;
     grid-row: 1;
   }
-  .charles-vignette {
+  .agrume-vignette {
     grid-column: 1;
     grid-row: 2;
   }
