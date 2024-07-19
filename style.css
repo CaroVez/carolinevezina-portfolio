@@ -6,13 +6,49 @@
   @styleset { alt: 1; }
 }
 @font-face {
+	font-family: 'Signature';
+	src: url(./fonts/Oooh_Baby/OoohBaby-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Grenadier';
+	src: url(./fonts/grenadier/GrenadierNF.ttf);
+}
+@font-face {
+	font-family: 'NovaMono';
+	src: url(./fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+@font-face {
+	font-family: 'Love';
+	src: url(./fonts/Love_Light/LoveLight-Regular.ttf);
+}
+@font-face {
 	font-family: 'Architecs_Daughter';
 	src: url(./fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
 }
 @font-face {
-	font-family: 'Signature';
-	src: url(./fonts/Oooh_Baby/OoohBaby-Regular.ttf);
+	font-family: '20-db';
+	src: url(./fonts/20-db/20db.otf);
 }
+@font-face {
+  font-family: 'Lato';
+  src: url(./fonts/Lato/Lato-Thin.ttf);
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'Bai_Jamjuree';
+  src: url(./fonts/Bai_Jamjuree/BaiJamjuree-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'astron_boy';
+  src: url(./fonts/astron_boy/astron_boy.otf);
+}
+
+
+
 
 * {
 	margin: 0;
@@ -27,7 +63,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, .alt {
-  font-family: 'MuseoModerno';
+  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .alt {
   font-variant-alternates: styleset(alt);
@@ -98,7 +134,7 @@ ul, a {
   color: #7A5037;
 }
 .signature {
-  font-family: 'Signature';
+  font-family: 'Signature', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
   margin-left: 10%;
   font-weight: bold;
@@ -111,7 +147,7 @@ ul, a {
   border-color: #BA7954;
   color: #BA7954;
   border-radius: 5px;
-  font-family: 'MuseoModerno';
+  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
 }
 .dropdown-menu .disabled {
   color: #7A5037;
@@ -286,7 +322,7 @@ ul .sous-menu {
   color: #7A5037;
   font-size: 1.25rem;
   text-align: center;
-  font-family: 'MuseoModerno';
+  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
   margin-bottom: -2vh;
 }
 
@@ -349,10 +385,6 @@ ul .sous-menu {
 
 
 /* ##### TERRE DE THÉS ##### */
-
-.terre .title {
-  background-image: url("./images/terredethes/logo1.png");
-}
 
 .terre .moodboard-text {
   grid-column: 1 / 5;
@@ -547,11 +579,44 @@ ul .sous-menu {
 }
 
 
-/* ##### AV ##### */
 
-.av .title {
-  background-image: url("./images/av/logo.png");
+/* ##### CAROLINE À L'ÉTRANGER ##### */
+
+
+
+/* ##### L'AGRUME INDIGO ##### */
+
+.agrume .video1-text {
+  grid-column: 1 / 5;
+  grid-row: 3;
 }
+.agrume .video1 {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  width: 100%;
+}
+.agrume .video2-text {
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.agrume .video2 {
+  grid-column: 1 / 5;
+  grid-row: 6;
+  width: 100%;
+}
+.agrume .video3-text {
+  grid-column: 1 / 5;
+  grid-row: 7;
+}
+.agrume .video3 {
+  grid-column: 1 / 5;
+  grid-row: 8;
+  width: 100%;
+}
+
+
+
+/* ##### AV ##### */
 
 .av .zoning-text {
   grid-column: 1 / 5;
@@ -583,69 +648,16 @@ ul .sous-menu {
 }
 
 
-/* ##### OUR SUPER MUSIC APP ##### */
-
-.music .title {
-  background-image: url("./images/oursupermusicapp/logo.png");
-}
-
 
 /* ##### DICE GAME ##### */
 
-.dice .title {
-  background-image: url("./images/dicegame/vignette.png");
-}
 
 
-/* ##### CAROLINE À L'ÉTRANGER ##### */
+/* ##### OUR SUPER MUSIC APP ##### */
 
-.caroline .title {
-  background-image: url("./images/carolinealetranger/logo.JPG");
-}
-
-
-/* ##### L'AGRUME INDIGO ##### */
-
-.agrume .title {
-  background-color: #002B58;
-  font-family: 'Architecs_Daughter';
-  color: #Ec994B;
-  text-align: center;
-}
-.agrume .video1-text {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
-.agrume .video1 {
-  grid-column: 1 / 5;
-  grid-row: 4;
-  width: 100%;
-}
-.agrume .video2-text {
-  grid-column: 1 / 5;
-  grid-row: 5;
-}
-.agrume .video2 {
-  grid-column: 1 / 5;
-  grid-row: 6;
-  width: 100%;
-}
-.agrume .video3-text {
-  grid-column: 1 / 5;
-  grid-row: 7;
-}
-.agrume .video3 {
-  grid-column: 1 / 5;
-  grid-row: 8;
-  width: 100%;
-}
 
 
 /* ##### CLIPBOARD ##### */
-
-.clipboard .title {
-  background-image: url("./images/clipboard/logo.png");
-}
 
 .clipboard .desktop-text {
   grid-column: 1 / 5;
@@ -689,12 +701,7 @@ ul .sous-menu {
 
 /* ##### ASSO ##### */
 
-.asso .title {
-  background-image: url("./images/associationdevignobles/vignette.png");
-  background-size: cover;
-  background-repeat: repeat;
-  background-size: contain;
-}
+
 
 
 
@@ -825,9 +832,15 @@ ul .sous-menu {
 .wrapper-projet .title {
   grid-column: 1;
   grid-row: 1;
-  background-position: top;
+  /*background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain;*/
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .wrapper-projet .description {
   grid-column: 2 / 5;
@@ -837,6 +850,13 @@ ul .sous-menu {
 
 
 /* ##### TERRE DE THÉS ##### */
+
+.terre .title {
+  /*background-image: url("./images/terredethes/logo1.png");*/
+  font-family: 'Grenadier', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #405554;
+  color: #9a6f26;
+}
 
 .terre .logo1 {
   grid-column: 1;
@@ -924,7 +944,10 @@ ul .sous-menu {
 /* ##### CHARLES CANTIN ##### */
 
 .charles .title {
-  background-image: url("./images/charlescantin/vignette.jpg");
+  /*background-image: url("./images/charlescantin/vignette.jpg");*/
+  font-family: 'NovaMono', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #47555e;
+  color: #eeeeee;
 }
 .charles .logo {
   grid-column: 2 / 4;
@@ -1008,7 +1031,71 @@ ul .sous-menu {
 }
 
 
+
+/* ##### CAROLINE À L'ÉTRANGER ##### */
+
+.caroline .title {
+  /*background-image: url("./images/carolinealetranger/logo.JPG");*/
+  font-family: 'Love', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #373737;
+  color: white;
+  font-size: 3rem;
+  line-height: 2rem;
+}
+
+
+
+/* ##### L'AGRUME INDIGO ##### */
+
+.agrume .title {
+  font-family: 'Architecs_Daughter', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #002B58;
+  color: #Ec994B;
+}
+
+
+
+/* ##### AV ##### */
+
+.av .title {
+  /*background-image: url("./images/av/logo.png");*/
+  font-family: '20-db', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #dd9933;
+  color: black;
+}
+
+
+
+/* ##### DICE GAME ##### */
+
+.dice .title {
+  /*background-image: url("./images/dicegame/vignette.png");*/
+  font-family: 'Lato', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: rgb(241, 241, 241);
+  color: red;
+}
+
+
+
+/* ##### OUR SUPER MUSIC APP ##### */
+
+.music .title {
+  /*background-image: url("./images/oursupermusicapp/logo.png");*/
+  font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #F9E4D4;
+  color: #470D21;
+}
+
+
+
 /* ##### CLIPBOARD ##### */
+
+.clipboard .title {
+  /*background-image: url("./images/clipboard/logo.png");*/
+  font-family: 'Bai_Jamjuree', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #E8E9EA;
+  color: #26BAA4;
+}
 
 .clipboard .mobile1 {
   grid-column: 1;
@@ -1026,6 +1113,17 @@ ul .sous-menu {
   grid-column: 4;
   grid-row: 8;
   width: 100%;
+}
+
+
+
+/* ##### ASSO ##### */
+
+.asso .title {
+  /*background-image: url("./images/associationdevignobles/vignette.png");*/
+  font-family: 'astron_boy', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-color: #f6f6f6;
+  color: rgb(129, 22, 85);
 }
 
 
