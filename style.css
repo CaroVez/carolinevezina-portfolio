@@ -49,7 +49,6 @@
 
 
 
-
 * {
 	margin: 0;
 	padding: 0;
@@ -147,7 +146,7 @@ ul, a {
   border-color: #BA7954;
   color: #BA7954;
   border-radius: 5px;
-  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .dropdown-menu .disabled {
   color: #7A5037;
@@ -214,7 +213,6 @@ ul .sous-menu {
 
 
 
-
 /* ##### PROJETS ##### */
 
 .wrapper {
@@ -225,14 +223,12 @@ ul .sous-menu {
   margin-top: 2%;
   margin-bottom: 10%;
 }
-
 .projet {
   display: flex;
   background-size: cover;
   background-position: center;
 	border-radius: 5px;
 }
-
 .projet .overlay {
   display: contents;
 }
@@ -278,27 +274,31 @@ ul .sous-menu {
   grid-row: 5;
   background-image: url("./images/av/vignette.jpg");
 }
-.dice-vignette {
+.jungle-vignette {
   grid-column: 1;
   grid-row: 6;
-  background-image: url("./images/dicegame/vignette.png");
+  background-image: url("./images/lajungleverte/vignette.png");
 }
 .music-vignette {
   grid-column: 1;
   grid-row: 7;
   background-image: url("./images/oursupermusicapp/logo.png");
 }
-.clipboard-vignette {
+.dice-vignette {
   grid-column: 1;
   grid-row: 8;
+  background-image: url("./images/dicegame/vignette.png");
+}
+.clipboard-vignette {
+  grid-column: 1;
+  grid-row: 9;
   background-image: url("./images/clipboard/logo.png");
 }
 .asso-vignette {
   grid-column: 1;
-  grid-row: 9;
+  grid-row: 10;
   background-image: url("./images/associationdevignobles/vignette.png");
 }
-
 
 
 
@@ -322,10 +322,12 @@ ul .sous-menu {
   color: #7A5037;
   font-size: 1.25rem;
   text-align: center;
-  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: -2vh;
 }
-
+.wrapper-projet .title {
+  display: none;
+}
 .wrapper-projet .description {
   grid-column: 1 / 5;
   grid-row: 1;
@@ -366,21 +368,16 @@ ul .sous-menu {
     animation-timeline: view();
     animation-range: 250px 500px;
   }
-
   .wrapper-projet .tools > img {
     scale: inherit; opacity: inherit;
     animation: inherit;
     animation-timeline: inherit;
     animation-range: inherit;
   }
-
   @keyframes fade-in {
     to { scale: 1; opacity: 1;}
   }
 }
-
-
-
 
 
 
@@ -482,6 +479,7 @@ ul .sous-menu {
   grid-column: 3 / 5;
   grid-row: 20;
 }
+
 
 
 /* ##### CHARLES CANTIN ##### */
@@ -699,6 +697,7 @@ ul .sous-menu {
 }
 
 
+
 /* ##### ASSO ##### */
 
 
@@ -720,8 +719,9 @@ ul .sous-menu {
 
 
 
-
-
+/* ################################################# */
+/* #################### DESKTOP #################### */
+/* ################################################# */
 
 @media screen and (min-width: 1080px) {
   .navbar-brand {
@@ -751,14 +751,12 @@ ul .sous-menu {
 
 
 
-
   /* ##### PROJETS ##### */
   
   .wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(45vh, auto);
   }
-  
   .projet .overlay {
     display: none;
   }
@@ -781,14 +779,10 @@ ul .sous-menu {
   }
   
   .terre-vignette {
-    grid-column: 1;
+    grid-column: 1 / 3;
     grid-row: 1;
   }
   .charles-vignette {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .caroline-vignette {
     grid-column: 3;
     grid-row: 1;
   }
@@ -796,467 +790,355 @@ ul .sous-menu {
     grid-column: 1;
     grid-row: 2;
   }
+  .caroline-vignette {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
   .av-vignette {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .dice-vignette {
-    grid-column: 3;
-    grid-row: 2;
-  }
-  .music-vignette {
     grid-column: 1;
     grid-row: 3;
   }
-  .clipboard-vignette {
+  .jungle-vignette {
     grid-column: 2;
     grid-row: 3;
   }
-  .asso-vignette {
+  .music-vignette {
     grid-column: 3;
     grid-row: 3;
+  }
+  .dice-vignette {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .clipboard-vignette {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .asso-vignette {
+    grid-column: 3;
+    grid-row: 4;
   }  
 
 
-/* ##### PROJET ##### */
 
-.wrapper-projet .text {
-  font-size: 1rem;
-}
-.wrapper-projet .description {
-  text-align: justify;
-}
-.wrapper-projet .description .title-mobile {
-  display: none;
-}
-.wrapper-projet .title {
-  grid-column: 1;
-  grid-row: 1;
-  /*background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;*/
-  text-align: center;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.wrapper-projet .description {
-  grid-column: 2 / 5;
-  grid-row: 1;
-  color: #7A5037;
-}
+  /* ##### PROJET ##### */
 
-
-/* ##### TERRE DE THÉS ##### */
-
-.terre .title {
-  /*background-image: url("./images/terredethes/logo1.png");*/
-  font-family: 'Grenadier', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #405554;
-  color: #9a6f26;
-}
-
-.terre .logo1 {
-  grid-column: 1;
-  grid-row: 6;
-}
-.terre .logo2 {
-  grid-column: 2;
-  grid-row: 6;
-}
-.terre .logo3 {
-  grid-column: 3;
-  grid-row: 6;
-}
-.terre .logo4 {
-  grid-column: 4;
-  grid-row: 6;
-}
-.terre .arborescence-text {
-  grid-column: 1 / 5;
-  grid-row: 7;
-}
-.terre .arborescence {
-  grid-column: 1 / 5;
-  grid-row: 8;
-}
-.terre .mobiles-text {
-  grid-column: 1 / 5;
-  grid-row: 9;
-}
-.terre .mobile1 {
-  grid-column: 1;
-  grid-row: 10;
-}
-.terre .mobile2 {
-  grid-column: 2;
-  grid-row: 10;
-}
-.terre .mobile3 {
-  grid-column: 3;
-  grid-row: 10;
-}
-.terre .mobile4 {
-  grid-column: 4;
-  grid-row: 10;
-}
-.terre .video-text {
-  grid-column: 1 / 5;
-  grid-row: 11;
-}
-.terre .video {
-  grid-column: 1 / 5;
-  grid-row: 12;
-  width: 100%;
-}
-.terre .mockups-text {
-  grid-column: 1 / 5;
-  grid-row: 13;
-}
-.terre .mockup1 {
-  grid-column: 1 / 3;
-  grid-row: 14;
-}
-.terre .mockup2 {
-  grid-column: 3 / 5;
-  grid-row: 14;
-}
-.terre .packagings-text {
-  grid-column: 1 / 5;
-  grid-row: 15;
-}
-.terre .packaging1 {
-  grid-column: 1 / 3;
-  grid-row: 16;
-}
-.terre .packaging2 {
-  grid-column: 3 / 4;
-  grid-row: 16;
-}
-.terre .packaging3 {
-  grid-column: 4 / 5;
-  grid-row: 16;
-}
-
-
-/* ##### CHARLES CANTIN ##### */
-
-.charles .title {
-  /*background-image: url("./images/charlescantin/vignette.jpg");*/
-  font-family: 'NovaMono', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #47555e;
-  color: #eeeeee;
-}
-.charles .logo {
-  grid-column: 2 / 4;
-  grid-row: 4;
-}
-.charles .mobilew1 {
-  grid-column: 1;
-  grid-row: 6;
-}
-.charles .mobilew2 {
-  grid-column: 2;
-  grid-row: 6;
-}
-.charles .mobilew3 {
-  grid-column: 3;
-  grid-row: 6;
-}
-.charles .mobilew4 {
-  grid-column: 4;
-  grid-row: 6;
-}
-.charles .mobile-text {
-  grid-column: 1 / 5;
-  grid-row: 7;
-}
-.charles .mobile1 {
-  grid-column: 1;
-  grid-row: 8;
-}
-.charles .mobile2 {
-  grid-column: 2;
-  grid-row: 8;
-}
-.charles .mobile3 {
-  grid-column: 3;
-  grid-row: 8;
-}
-.charles .mobile4 {
-  grid-column: 4;
-  grid-row: 8;
-}
-.charles .desktopw-text {
-  grid-column: 1 / 5;
-  grid-row: 9;
-}
-.charles .desktopw1 {
-  grid-column: 1 / 5;
-  grid-row: 10;
-}
-.charles .desktopw2 {
-  grid-column: 1 / 5;
-  grid-row: 11;
-}
-.charles .desktopw3 {
-  grid-column: 1 / 5;
-  grid-row: 12;
-}
-.charles .desktopw4 {
-  grid-column: 1 / 5;
-  grid-row: 13;
-}
-.charles .desktop-text {
-  grid-column: 1 / 5;
-  grid-row: 14;
-}
-.charles .desktop1 {
-  grid-column: 1 / 5;
-  grid-row: 15;
-}
-.charles .desktop2 {
-  grid-column: 1 / 5;
-  grid-row: 16;
-}
-.charles .desktop3 {
-  grid-column: 1 / 5;
-  grid-row: 17;
-}
-.charles .desktop4 {
-  grid-column: 1 / 5;
-  grid-row: 18;
-}
-
-
-
-/* ##### CAROLINE À L'ÉTRANGER ##### */
-
-.caroline .title {
-  /*background-image: url("./images/carolinealetranger/logo.JPG");*/
-  font-family: 'Love', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #373737;
-  color: white;
-  font-size: 3rem;
-  line-height: 2rem;
-}
-
-
-
-/* ##### L'AGRUME INDIGO ##### */
-
-.agrume .title {
-  font-family: 'Architecs_Daughter', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #002B58;
-  color: #Ec994B;
-}
-
-
-
-/* ##### AV ##### */
-
-.av .title {
-  /*background-image: url("./images/av/logo.png");*/
-  font-family: '20-db', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #dd9933;
-  color: black;
-}
-
-
-
-/* ##### DICE GAME ##### */
-
-.dice .title {
-  /*background-image: url("./images/dicegame/vignette.png");*/
-  font-family: 'Lato', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: rgb(241, 241, 241);
-  color: red;
-}
-
-
-
-/* ##### OUR SUPER MUSIC APP ##### */
-
-.music .title {
-  /*background-image: url("./images/oursupermusicapp/logo.png");*/
-  font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #F9E4D4;
-  color: #470D21;
-}
-
-
-
-/* ##### CLIPBOARD ##### */
-
-.clipboard .title {
-  /*background-image: url("./images/clipboard/logo.png");*/
-  font-family: 'Bai_Jamjuree', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #E8E9EA;
-  color: #26BAA4;
-}
-
-.clipboard .mobile1 {
-  grid-column: 1;
-  grid-row: 8;
-}
-.clipboard .mobile2 {
-  grid-column: 2;
-  grid-row: 8;
-}
-.clipboard .mobile3 {
-  grid-column: 3;
-  grid-row: 8;
-}
-.clipboard .mobilevideo {
-  grid-column: 4;
-  grid-row: 8;
-  width: 100%;
-}
-
-
-
-/* ##### ASSO ##### */
-
-.asso .title {
-  /*background-image: url("./images/associationdevignobles/vignette.png");*/
-  font-family: 'astron_boy', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
-  background-color: #f6f6f6;
-  color: rgb(129, 22, 85);
-}
-
-
-}
-
-/*
-@media screen and (max-width: 1400px) {
-  .projets, .cv, .presentation {
-    width: 70%;
-    font-size: 1.2vw;
+  .wrapper-projet .text {
+    font-size: 1rem;
   }
-  header {
-    height: 27%;
+  .wrapper-projet .description {
+    text-align: justify;
   }
-  .navbar-nav {
-    margin-top: 13vh;
+  .wrapper-projet .description .title-mobile {
+    display: none;
   }
-  .body {
-    padding-top: 17%;
-  }
-  h5 {
-    font-size: 1.4vw;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .projets, .cv, .presentation {
-    width: 70%;
-    font-size: 1.4vw;
-  }
-  header {
-    height: 23%;
-  }
-  .navbar-nav {
-    margin-top: 15vh;
-  }
-  .body {
-    padding-top: 20%;
-  }
-  h5 {
-    font-size: 1.4vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .projets, .cv, .presentation {
-    width: 90%;
-    font-size: 2vw;
-  }
-  h1 {
-    font-size: 4.9vw;
-  }
-  h2, .dropdown-item {
-    font-size: 3vw;
-  }
-  h3 {
-    font-size: 1.6vw;
-  }
-  h4 {
-    font-size: 1.8vw;
-  }
-  h5 {
-    font-size: 2vw;
-  }
-  header {
-    height: 15%;
-  }
-  .navbar-nav {
-    margin-top: 12vh;
-  }
-  .body {
-    padding-top: 20%;
-  }
-  h5 img, h5 svg {
-    width: 24px;
-    height: 24px;
-  } 
-}
-
-@media screen and (max-width: 576px) {
-  .projets, .cv {
-    width: 90%;
-    font-size: 2.5vw;
-  }
-  .presentation {
-    font-size: 3.5vw;
+  .wrapper-projet .title {
+    grid-column: 1;
+    grid-row: 1;
+    /*background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;*/
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
-  h1 {
-    font-size: 6vw;
+  .wrapper-projet .description {
+    grid-column: 2 / 5;
+    grid-row: 1;
+    color: #7A5037;
   }
-  h2, .dropdown-item {
-    font-size: 4vw;
+
+
+
+  /* ##### TERRE DE THÉS ##### */
+
+  .terre .title {
+    /*background-image: url("./images/terredethes/logo1.png");*/
+    font-family: 'Grenadier', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #405554;
+    color: #9a6f26;
   }
-  h3 {
-    font-size: 2vw;
+
+  .terre .logo1 {
+    grid-column: 1;
+    grid-row: 6;
   }
-  h4 {
-    font-size: 3vw;
+  .terre .logo2 {
+    grid-column: 2;
+    grid-row: 6;
   }
-  h5 {
-    font-size: 3vw;
+  .terre .logo3 {
+    grid-column: 3;
+    grid-row: 6;
   }
-  header {
-    height: 12%;
+  .terre .logo4 {
+    grid-column: 4;
+    grid-row: 6;
   }
-  .navbar-nav {
-    margin-top: 10vh;
+  .terre .arborescence-text {
+    grid-column: 1 / 5;
+    grid-row: 7;
   }
-  .body {
-    padding-top: 25%;
+  .terre .arborescence {
+    grid-column: 1 / 5;
+    grid-row: 8;
   }
-  .signature {
-    width: 30%;
-    margin-left: 0%;
+  .terre .mobiles-text {
+    grid-column: 1 / 5;
+    grid-row: 9;
   }
-  h5 img, h5 svg {
-    width: 16px;
-    height: 16px;
-  } 
+  .terre .mobile1 {
+    grid-column: 1;
+    grid-row: 10;
+  }
+  .terre .mobile2 {
+    grid-column: 2;
+    grid-row: 10;
+  }
+  .terre .mobile3 {
+    grid-column: 3;
+    grid-row: 10;
+  }
+  .terre .mobile4 {
+    grid-column: 4;
+    grid-row: 10;
+  }
+  .terre .video-text {
+    grid-column: 1 / 5;
+    grid-row: 11;
+  }
+  .terre .video {
+    grid-column: 1 / 5;
+    grid-row: 12;
+    width: 100%;
+  }
+  .terre .mockups-text {
+    grid-column: 1 / 5;
+    grid-row: 13;
+  }
+  .terre .mockup1 {
+    grid-column: 1 / 3;
+    grid-row: 14;
+  }
+  .terre .mockup2 {
+    grid-column: 3 / 5;
+    grid-row: 14;
+  }
+  .terre .packagings-text {
+    grid-column: 1 / 5;
+    grid-row: 15;
+  }
+  .terre .packaging1 {
+    grid-column: 1 / 3;
+    grid-row: 16;
+  }
+  .terre .packaging2 {
+    grid-column: 3 / 4;
+    grid-row: 16;
+  }
+  .terre .packaging3 {
+    grid-column: 4 / 5;
+    grid-row: 16;
+  }
+
+
+
+  /* ##### CHARLES CANTIN ##### */
+
+  .charles .title {
+    /*background-image: url("./images/charlescantin/vignette.jpg");*/
+    font-family: 'NovaMono', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #47555e;
+    color: #eeeeee;
+  }
+  .charles .logo {
+    grid-column: 2 / 4;
+    grid-row: 4;
+  }
+  .charles .mobilew1 {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  .charles .mobilew2 {
+    grid-column: 2;
+    grid-row: 6;
+  }
+  .charles .mobilew3 {
+    grid-column: 3;
+    grid-row: 6;
+  }
+  .charles .mobilew4 {
+    grid-column: 4;
+    grid-row: 6;
+  }
+  .charles .mobile-text {
+    grid-column: 1 / 5;
+    grid-row: 7;
+  }
+  .charles .mobile1 {
+    grid-column: 1;
+    grid-row: 8;
+  }
+  .charles .mobile2 {
+    grid-column: 2;
+    grid-row: 8;
+  }
+  .charles .mobile3 {
+    grid-column: 3;
+    grid-row: 8;
+  }
+  .charles .mobile4 {
+    grid-column: 4;
+    grid-row: 8;
+  }
+  .charles .desktopw-text {
+    grid-column: 1 / 5;
+    grid-row: 9;
+  }
+  .charles .desktopw1 {
+    grid-column: 1 / 5;
+    grid-row: 10;
+  }
+  .charles .desktopw2 {
+    grid-column: 1 / 5;
+    grid-row: 11;
+  }
+  .charles .desktopw3 {
+    grid-column: 1 / 5;
+    grid-row: 12;
+  }
+  .charles .desktopw4 {
+    grid-column: 1 / 5;
+    grid-row: 13;
+  }
+  .charles .desktop-text {
+    grid-column: 1 / 5;
+    grid-row: 14;
+  }
+  .charles .desktop1 {
+    grid-column: 1 / 5;
+    grid-row: 15;
+  }
+  .charles .desktop2 {
+    grid-column: 1 / 5;
+    grid-row: 16;
+  }
+  .charles .desktop3 {
+    grid-column: 1 / 5;
+    grid-row: 17;
+  }
+  .charles .desktop4 {
+    grid-column: 1 / 5;
+    grid-row: 18;
+  }
+
+
+
+  /* ##### CAROLINE À L'ÉTRANGER ##### */
+
+  .caroline .title {
+    /*background-image: url("./images/carolinealetranger/logo.JPG");*/
+    font-family: 'Love', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #373737;
+    color: white;
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+
+
+
+  /* ##### L'AGRUME INDIGO ##### */
+
+  .agrume .title {
+    font-family: 'Architecs_Daughter', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana,   sans-serif;
+    background-color: #002B58;
+    color: #Ec994B;
+  }
+
+
+
+  /* ##### AV ##### */
+
+  .av .title {
+    /*background-image: url("./images/av/logo.png");*/
+    font-family: '20-db', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dd9933;
+    color: black;
+  }
+
+
+
+  /* ##### DICE GAME ##### */
+
+  .dice .title {
+    /*background-image: url("./images/dicegame/vignette.png");*/
+    font-family: 'Lato', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(241, 241, 241);
+    color: red;
+  }
+
+
+
+  /* ##### LA JUNGLE VERTE ##### */
+
+  .jungle .title {
+    font-family: 'Segoe UI', 'Century Gothic', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #31b472;
+    color: white;
+  }
+
+
+
+  /* ##### OUR SUPER MUSIC APP ##### */
+
+  .music .title {
+    /*background-image: url("./images/oursupermusicapp/logo.png");*/
+    font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F9E4D4;
+    color: #470D21;
+  }
+
+
+
+  /* ##### CLIPBOARD ##### */
+
+  .clipboard .title {
+    /*background-image: url("./images/clipboard/logo.png");*/
+    font-family: 'Bai_Jamjuree', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E8E9EA;
+    color: #26BAA4;
+  }
+
+  .clipboard .mobile1 {
+    grid-column: 1;
+    grid-row: 8;
+  }
+  .clipboard .mobile2 {
+    grid-column: 2;
+    grid-row: 8;
+  }
+  .clipboard .mobile3 {
+    grid-column: 3;
+    grid-row: 8;
+  }
+  .clipboard .mobilevideo {
+    grid-column: 4;
+    grid-row: 8;
+    width: 100%;
+  }
+
+
+
+  /* ##### ASSO ##### */
+
+  .asso .title {
+    /*background-image: url("./images/associationdevignobles/vignette.png");*/
+    font-family: 'astron_boy', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f6f6;
+    color: rgb(129, 22, 85);
+  }
+
 }
-*/
-
-/**
-
-svg, img {
-  width: 24px;
-  height: 24px;
-}
-
-svg, img {
-  width: 16px;
-  height: 16px;
-}
-
-background-color: rgba(255, 255, 255, 30%);
