@@ -57,7 +57,8 @@
 }
 
 header {
-  background: url('images/header.png') no-repeat;
+  background-color: #377a79;
+  /*background: url('images/header.png') no-repeat;*/
   height: 50px;
 }
 
@@ -78,7 +79,7 @@ h2 {
 h3, h3 a{
   font-size: 1.6rem;
   text-align: center;
-  color: #7A5037;
+  color: #5AC7C5;
 }
 h4 {
   font-size: 2rem;
@@ -86,16 +87,12 @@ h4 {
 h5 {
   font-size: 1rem;
   text-align: center;
-  color: #7A5037;
-}
-
-a {
-  color: #BA7954;
+  color: #5AC7C5;
 }
 
 .body {
   padding-top: 17%;
-  background: url('images/body.png') repeat;
+  background: url('images/body.jpg') repeat;
   min-height: 100vh;
 }
 
@@ -129,13 +126,14 @@ ul, a {
   text-align: justify;
 }
 .presentation p {
-  color: #7A5037;
+  color: white;
 }
-.signature {
+.presentation .signature {
   font-family: 'Signature', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
   margin-left: 10%;
   font-weight: bold;
+  color: #5AC7C5;
 }
 .cv, .projets {
   text-align: left;
@@ -151,11 +149,11 @@ ul, a {
   color: #7A5037;
 }
 ul .sous-menu {
-  color: #377a79;
+  color: #377A79;
   list-style-type: circle;
 }
 .dropdown-item:hover, .dropdown-item:hover u, .dropdown-item:focus {
-  background-color: #377a79;
+  background-color: #377A79;
   color: white;
 }
 .dropdown {
@@ -169,17 +167,14 @@ ul .sous-menu {
 .dropdown .btn:focus {
   border-color: #BA7954;
 }
-.dropdown .bi-list:hover, .dropdown .bi-list:focus {
-  color: #7A5037;
-}
 
 .accordion {
-  border-bottom: 1px solid #BA7954;
+  border-bottom: 1px solid #7A5037;
   border-radius: 0;
 }
 .accordion-item {
-  border: 1px solid #BA7954;
-  background: rgba(255, 255, 255, 30%);
+  border: 1px solid #7A5037;
+  background: rgba(255, 255, 255, 50%);
 }
 .accordion-item button svg, .accordion-item .accordion-body svg {
   margin-right: 8px;
@@ -203,8 +198,8 @@ ul .sous-menu {
 .accordion-button:not(.collapsed)::after {
   filter: brightness(0%) invert(100%);
 }
-.accordion-body {
-  color: #7A5037;
+.accordion-body, .accordion-body a {
+  color: white;
 }
 .accordion-body ul {
   margin-left: -25px;
@@ -311,18 +306,17 @@ ul .sous-menu {
 }
 .wrapper-projet img {
   width: 100%;
-  object-fit: co;
 }
 .wrapper-projet .tools img {
   width: inherit;
   object-fit: inherit;
 }
 .wrapper-projet .text {
-  color: #7A5037;
+  color: #5AC7C5;
   font-size: 1.25rem;
   text-align: center;
   font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: -2vh;
+  margin-top: 2rem;
 }
 .wrapper-projet .title {
   display: none;
@@ -330,15 +324,17 @@ ul .sous-menu {
 .wrapper-projet .description {
   grid-column: 1 / 5;
   grid-row: 1;
-  color: #7A5037;
-  text-align: center;
+}
+.wrapper-projet .description p {
+  color: white;
+  text-align: justify;
 }
 .wrapper-projet .description img {
   width: inherit;
   object-fit: contain;
 }
 .wrapper-projet .description .ecole {
-  color: #377a79;
+  color: #BA7954;
   font-weight: bold;
 }
 .wrapper-projet .description .link {
@@ -346,10 +342,13 @@ ul .sous-menu {
   padding-top: 2vh;
   height: 2rem;
 }
+.wrapper-projet .description .link a {
+  color: #BA7954;
+}
 .wrapper-projet .tools {
   grid-column: 1 / 5;
   grid-row: 2;
-  color: #377a79;
+  color: white;
   text-align: center;
   border-bottom: 1px solid #377a79;
   padding-bottom: 2vh;
@@ -729,7 +728,7 @@ ul .sous-menu {
   .accordion-item>h3 {
     font-size: 1rem;
   }
-  a:hover, .navbar-brand:hover {
+  a:hover, .navbar-brand:hover, .description .link a:hover, .dropdown>a:hover {
     color: #7A5037;
   }
   .dropdown {
@@ -743,6 +742,10 @@ ul .sous-menu {
   }
   .body {
     padding-top: 5%;
+  }
+  .accordion-button:hover {
+    color: white;
+    background: #377A79;
   }
   .accordion-body {
     font-size: 0.75rem;
