@@ -62,7 +62,7 @@ header {
   height: 50px;
 }
 
-h1, h2, h3, h4, h5, .alt, .highlight {
+h1, h2, h3, h4, h5, .alt, .highlight, footer>div {
   font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .alt {
@@ -94,6 +94,25 @@ h5 {
   padding-top: 17%;
   background: url('images/body.jpg') repeat;
   min-height: 100vh;
+  position: relative;
+}
+
+footer {
+  display: flex;
+	align-items:end;
+	justify-content: center;
+	text-align: center;
+  width: 98%;
+  color: white;
+  padding: 1rem;
+  border-top: 1px solid #373737;
+  padding-top: 2vh;
+  margin-top: 10vh;
+  position: absolute;
+  bottom: 0;
+}
+footer a svg {
+  color: white;
 }
 
 nav {
@@ -124,6 +143,7 @@ ul, a {
 }
 .presentation {
   text-align: justify;
+  margin-bottom: 10vh;
 }
 .presentation p {
   color: white;
@@ -137,6 +157,7 @@ ul, a {
 }
 .cv, .projets {
   text-align: left;
+  margin-bottom: 30vh;
 }
 .highlight {
   color: #BA7954;
@@ -177,7 +198,6 @@ ul .sous-menu {
 
 .accordion {
   border-bottom: 1px solid #7A5037;
-  border-radius: 0;
 }
 .accordion-item {
   border: 1px solid #7A5037;
@@ -222,7 +242,6 @@ ul .sous-menu {
   grid-gap: 2vh;
   grid-auto-rows: minmax(85vw, auto);
   margin-top: 2%;
-  margin-bottom: 10%;
 }
 .projet {
   display: flex;
@@ -309,7 +328,6 @@ ul .sous-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2vh;
-  margin-bottom: 40vh;
 }
 .wrapper-projet img {
   width: 100%;
@@ -366,11 +384,18 @@ ul .sous-menu {
 
 /* ##### ANIMATION IMAGES ##### */
 @media (prefers-reduced-motion: no-preference) {
-  .wrapper-projet .item > img, .wrapper-projet .item > video {
+  .wrapper > a {
     scale: .8; opacity: 0;
     animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range: 250px 500px;
+    animation-range: 0px 500px;
+  }
+  .wrapper-projet .item > img, 
+  .wrapper-projet .item > video {
+    scale: .8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 150px 500px;
   }
   .wrapper-projet .tools > img {
     scale: inherit; opacity: inherit;
@@ -730,6 +755,9 @@ ul .sous-menu {
 @media screen and (min-width: 1080px) {
   .navbar-brand {
     text-align: right;
+  }
+  footer a svg:hover {
+    color: #377A79;
   }
   .accordion-item>h3 {
     font-size: 1rem;
