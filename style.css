@@ -75,7 +75,7 @@ h2 {
   font-size: 0.7rem;
   margin-top: -0.75rem;
 }
-h3 {
+h3, h3 a{
   font-size: 1.6rem;
   text-align: center;
   color: #7A5037;
@@ -95,8 +95,7 @@ a {
 
 .body {
   padding-top: 17%;
-  background: url('images/body.png') no-repeat;
-  background-size: cover;
+  background: url('images/body.png') repeat;
   min-height: 100vh;
 }
 
@@ -735,6 +734,9 @@ ul .sous-menu {
   }
   .dropdown {
     margin-left: 0;
+  }
+  h3 a:hover {
+    color: #BA7954;
   }
   .presentation, .cv, .projets {
     width: 70%;
