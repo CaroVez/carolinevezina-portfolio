@@ -62,7 +62,7 @@ header {
   height: 50px;
 }
 
-h1, h2, h3, h4, h5, .alt {
+h1, h2, h3, h4, h5, .alt, .highlight {
   font-family: 'MuseoModerno', 'Century Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .alt {
@@ -138,6 +138,13 @@ ul, a {
 .cv, .projets {
   text-align: left;
 }
+.highlight {
+  color: #BA7954;
+  font-size: 1.5rem;
+}
+.highlight2 {
+  color: #BA7954;
+}
 
 .dropdown-menu, .dropdown-item, u {
   border-color: #BA7954;
@@ -174,14 +181,14 @@ ul .sous-menu {
 }
 .accordion-item {
   border: 1px solid #7A5037;
-  background: rgba(255, 255, 255, 50%);
+  background: rgba(255, 255, 255, 30%);
 }
 .accordion-item button svg, .accordion-item .accordion-body svg {
   margin-right: 8px;
 }
 .accordion-button {
   color: #7A5037;
-  background: rgba(255, 255, 255, 30%);
+  background: rgba(255, 255, 255, 70%);
   font-size: inherit;
 }
 .accordion-button:focus {
@@ -329,18 +336,17 @@ ul .sous-menu {
   color: white;
   text-align: justify;
 }
+.wrapper-projet .description .first-p {
+  text-align: left;
+  border-top: 1px solid #BA7954;
+  padding-top: 2vh;
+}
 .wrapper-projet .description img {
   width: inherit;
   object-fit: contain;
 }
-.wrapper-projet .description .ecole {
-  color: #BA7954;
-  font-weight: bold;
-}
 .wrapper-projet .description .link {
-  border-top: 1px solid #377a79;
-  padding-top: 2vh;
-  height: 2rem;
+  margin-bottom: 0;
 }
 .wrapper-projet .description .link a {
   color: #BA7954;
@@ -350,9 +356,9 @@ ul .sous-menu {
   grid-row: 2;
   color: white;
   text-align: center;
-  border-bottom: 1px solid #377a79;
+  border-bottom: 1px solid #BA7954;
   padding-bottom: 2vh;
-  border-top: 1px solid #377a79;
+  border-top: 1px solid #BA7954;
   padding-top: 2vh;
 }
 
@@ -854,6 +860,10 @@ ul .sous-menu {
     grid-column: 2 / 5;
     grid-row: 1;
     color: #7A5037;
+  }
+  .wrapper-projet .description .first-p {
+    border-top: inherit;
+    padding-top: inherit;
   }
 
 
