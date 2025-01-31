@@ -149,7 +149,7 @@ ul, a {
 }
 .presentation {
   text-align: justify;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
 }
 .presentation p {
   color: white;
@@ -160,6 +160,20 @@ ul, a {
   margin-left: 10%;
   font-weight: bold;
   color: #5AC7C5;
+}
+.historique p {
+  font-size: 0.85rem;
+}
+.icones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: -2rem;
+}
+.icones img {
+  width: 48px;
+  height: 48px;
 }
 .cv, .projets {
   text-align: left;
@@ -200,6 +214,13 @@ ul .sous-menu {
 }
 .dropdown .btn:focus {
   border-color: #BA7954;
+}
+
+#desktop {
+  display: none;
+}
+#mobile {
+  display: block;
 }
 
 .accordion {
@@ -274,6 +295,9 @@ ul .sous-menu {
 	justify-content: center;
 	text-align: center;
 }
+
+
+
 
 .terre-vignette {
   grid-column: 1;
@@ -378,7 +402,8 @@ ul .sous-menu {
   margin-bottom: 0;
 }
 .wrapper-projet .description .link a {
-  color: #BA7954;
+  color: #BA7954; 
+  /* color: #5AC7C5; */
 }
 .wrapper-projet .tools {
   grid-column: 1 / 5;
@@ -870,6 +895,24 @@ ul .sous-menu {
 /* ################################################# */
 /* #################### DESKTOP #################### */
 /* ################################################# */
+@media screen and (min-width: 992px) {
+  #desktop {
+    display: flex;
+    justify-content: center;
+  }
+  #desktop .cv {
+    text-align: center;
+  }
+  #mobile {
+    display: none;
+  }
+
+  iframe {
+    width: 775px;
+    height: 1093px;
+  }
+}
+
 
 @media screen and (min-width: 1080px) {
   .navbar-brand {
@@ -893,9 +936,14 @@ ul .sous-menu {
   .presentation, .cv, .projets {
     width: 70%;
   }
+  .icones img {
+    width: 72px;
+    height: 72px;
+  }
   .body {
     padding-top: 5%;
   }
+
   .accordion-button:hover {
     color: white;
     background: #377A79;
