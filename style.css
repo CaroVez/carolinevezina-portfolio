@@ -903,6 +903,7 @@ ul .sous-menu {
   }
   #desktop .cv {
     text-align: center;
+    justify-items: center;
   }
   #mobile {
     display: none;
@@ -912,6 +913,15 @@ ul .sous-menu {
     width: 775px;
     height: 1093px;
   }
+
+  #desktop .accordion {
+    width: 775px;
+    margin-top: 5rem;
+  }
+  #desktop .accordion-body {
+    font-size: 1rem;
+  }
+
 }
 
 
