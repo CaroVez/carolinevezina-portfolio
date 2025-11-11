@@ -2,55 +2,18 @@
   font-family: "MuseoModerno";
   src: url(./fonts/MuseoModerno/MuseoModerno-Regular.ttf);
 }
+@font-face {
+  font-family: "MuseoModerno-Light";
+  src: url(./fonts/MuseoModerno/MuseoModerno-Light.ttf);
+}
+@font-face {
+  font-family: "MuseoModerno-Black";
+  src: url(./fonts/MuseoModerno/MuseoModerno-Black.ttf);
+}
 @font-feature-values 'MuseoModerno' {
   @styleset {
     alt: 1;
   }
-}
-@font-face {
-  font-family: "Signature";
-  src: url(./fonts/Oooh_Baby/OoohBaby-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Grenadier";
-  src: url(./fonts/grenadier/GrenadierNF.ttf);
-}
-@font-face {
-  font-family: "NovaMono";
-  src: url(./fonts/Nova_Mono/NovaMono-Regular.ttf);
-}
-@font-face {
-  font-family: "Love";
-  src: url(./fonts/Love_Light/LoveLight-Regular.ttf);
-}
-@font-face {
-  font-family: "Architecs_Daughter";
-  src: url(./fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
-}
-@font-face {
-  font-family: "20-db";
-  src: url(./fonts/20-db/20db.otf);
-}
-@font-face {
-  font-family: "Lato";
-  src: url(./fonts/Lato/Lato-Thin.ttf);
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: "Bai_Jamjuree";
-  src: url(./fonts/Bai_Jamjuree/BaiJamjuree-SemiBold.ttf);
-}
-@font-face {
-  font-family: "astron_boy";
-  src: url(./fonts/astron_boy/astron_boy.otf);
-}
-@font-face {
-  font-family: "Sevenfold";
-  src: url(./fonts/Sevenfold/Sevenfold.ttf);
 }
 
 * {
@@ -61,9 +24,7 @@
 }
 
 header {
-  background-color: #377a79;
-  /*background: url('images/header.png') no-repeat;*/
-  height: 50px;
+  height: 80px;
 }
 
 h1,
@@ -71,9 +32,7 @@ h2,
 h3,
 h4,
 h5,
-.alt,
-.highlight,
-footer > div {
+.alt {
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
 }
@@ -82,53 +41,44 @@ footer > div {
 }
 
 h1 {
-  font-size: 2rem;
-  text-align: right;
+  font-size: 4.5rem;
+  color: #ba7954;
+  font-weight: bold;
+}
+h1 span.code {
+  font-size: 3rem;
+  font-weight: normal;
 }
 h2 {
-  font-size: 0.7rem;
-  margin-top: -0.75rem;
+  font-size: 3rem;
 }
-h3,
-h3 a {
-  font-size: 1.6rem;
-  text-align: center;
-  color: #5ac7c5;
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 h4 {
+  font-size: 0.73rem;
+  margin-top: -0.75rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ba7954;
+  margin-bottom: 2rem;
+}
+h6 {
   font-size: 2rem;
 }
-h5 {
-  font-size: 1rem;
-  text-align: center;
-  color: #5ac7c5;
-}
 
+body {
+  background-color: #434343;
+}
 .body {
-  padding-top: 17%;
-  padding-bottom: 17%;
-  /*background: url('images/body.jpg') repeat;*/
-  background-color: #373737;
-  min-height: 100vh;
-  position: relative;
-}
-
-footer {
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  text-align: center;
-  width: 98%;
-  color: white;
-  padding: 1rem;
-  border-top: 1px solid #373737;
-  padding-top: 2vh;
-  margin-top: 10vh;
-  position: absolute;
-  bottom: 0;
-}
-footer a svg {
-  color: white;
+  background: url("images/bandeau_moy_small.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 nav {
@@ -137,7 +87,11 @@ nav {
   z-index: 99999;
 }
 .navbar-brand {
-  color: white;
+  color: #377a79;
+}
+ul {
+  display: flex;
+  gap: 2.5rem;
 }
 ul,
 a {
@@ -149,80 +103,132 @@ a {
   margin-left: 5%;
 }
 
-.main {
+.presentation,
+.about,
+.projets {
+  margin: 0 auto;
+}
+.presentation,
+.about {
+  text-align: justify;
+  padding-bottom: 2vh;
+}
+.about {
+  padding-top: 5vh;
+}
+.experience,
+.competences-techniques {
+  padding-top: 16vh;
+}
+.presentation h1,
+.presentation-projet h1 {
+  margin: 9rem 0;
+}
+.presentation h2 {
+  color: white;
+  font-weight: bold;
+}
+.presentation .intro,
+.presentation p b {
+  color: white;
+  font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+}
+.presentation p,
+.presentation .dev b,
+.about p,
+.about p b {
+  color: white;
+  font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+.presentation .buttons {
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+.presentation .buttons .button {
+  background-color: #377a79;
+  color: black;
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
+    Verdana, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+}
+.presentation .buttons .button b {
+  font-family: "MuseoModerno-Black", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
 }
 
-.presentation,
-.cv,
-.projets {
-  margin-left: 5%;
-  margin-right: 5%;
+.presentation .buttons .button:hover {
+  background-color: #ba7954;
+  transform: translateY(2px);
 }
-.presentation {
-  text-align: justify;
-  margin-bottom: 2vh;
+
+.presentation .arrows,
+.presentation-projet .arrows {
+  display: grid;
+  justify-content: right;
+  color: #ba7954;
+  margin-top: 4.5rem;
 }
-.presentation p {
-  color: white;
-}
-.presentation .signature {
-  font-family: "Signature", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-    Verdana, sans-serif;
-  font-size: 2rem;
-  margin-left: 10%;
-  font-weight: bold;
-  color: #5ac7c5;
-}
+
+.experience p,
 .historique p {
-  font-size: 0.85rem;
+  font-family: "MuseoModerno-Light", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
+}
+
+.competences-techniques p,
+.competences-techniques p b {
+  margin-top: 2rem;
+  font-size: 1.25rem;
 }
 .icones {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 1rem;
   margin-left: -2rem;
 }
-.icones img {
-  width: 48px;
-  height: 48px;
+.icones img,
+.icones li {
+  width: 80px;
+  height: 80px;
 }
-.cv,
+
 .projets {
   text-align: left;
-  margin-bottom: 30vh;
-}
-.highlight {
-  color: #ba7954;
-  font-size: 1.5rem;
-}
-.highlight2 {
-  color: #ba7954;
 }
 
 .dropdown-menu,
-.dropdown-item,
-u {
-  border-color: #ba7954;
-  color: #ba7954;
-  border-radius: 5px;
+.dropdown-item {
+  color: #377a79;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
+  font-weight: bold;
 }
-.dropdown-menu .disabled {
-  color: #7a5037;
+ul u {
+  color: #ba7954;
+  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
+    Verdana, sans-serif;
+  font-weight: bold;
 }
 ul .sous-menu {
-  color: #377a79;
+  color: #ba7954;
   list-style-type: circle;
 }
 .dropdown-item:hover,
 .dropdown-item:hover u,
 .dropdown-item:focus {
-  background-color: #377a79;
-  color: white;
+  color: #ba7954;
+  transform: translateY(2px);
 }
 .dropdown {
   margin-left: -2%;
@@ -286,15 +292,18 @@ ul .sous-menu {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2vh;
+  grid-gap: 5vh;
   grid-auto-rows: minmax(85vw, auto);
-  margin-top: 2%;
+  padding-top: 18vh;
+  padding-bottom: 12vh;
 }
 .projet {
   display: flex;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
+  border: solid 1px black;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
 }
 .projet .overlay {
   display: contents;
@@ -316,6 +325,16 @@ ul .sous-menu {
   text-align: center;
 }
 
+.mtavie-vignette {
+  grid-column: 1;
+  grid-row: 1;
+  background-image: url("./images/mtavie/bandeau-a-propos.png");
+}
+.boss-vignette {
+  grid-column: 1;
+  grid-row: 2;
+  background-image: url("./images/thanksboss/about-candidature-bg2.png");
+}
 .terre-vignette {
   grid-column: 1;
   grid-row: 1;
@@ -328,7 +347,7 @@ ul .sous-menu {
 }
 .caroline-vignette {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 2;
   background-image: url("./images/carolinealetranger/logo.JPG");
 }
 .agrume-vignette {
@@ -351,26 +370,6 @@ ul .sous-menu {
   grid-row: 7;
   background-image: url("./images/oursupermusicapp/logo.png");
 }
-.dice-vignette {
-  grid-column: 1;
-  grid-row: 8;
-  background-image: url("./images/dicegame/vignette.png");
-}
-.clipboard-vignette {
-  grid-column: 1;
-  grid-row: 9;
-  background-image: url("./images/clipboard/logo.png");
-}
-.stray-vignette {
-  grid-column: 1;
-  grid-row: 10;
-  background-image: url("./images/stray/vignette.png");
-}
-.asso-vignette {
-  grid-column: 1;
-  grid-row: 10;
-  background-image: url("./images/associationdevignobles/vignette.png");
-}
 
 /* ##### PROJET ##### */
 
@@ -379,48 +378,24 @@ ul .sous-menu {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2vh;
 }
-.wrapper-projet img {
-  width: 100%;
-}
-.wrapper-projet .tools img {
-  width: inherit;
-  object-fit: inherit;
-}
-.wrapper-projet .text {
-  color: #5ac7c5;
-  font-size: 1.25rem;
-  text-align: center;
-  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-    Verdana, sans-serif;
-  margin-top: 2rem;
-}
-.wrapper-projet .title {
-  display: none;
-}
-.wrapper-projet .description {
+.wrapper-projet .presentation-projet {
   grid-column: 1 / 5;
-  grid-row: 1;
+  grid-row: 1 / auto;
+  width: 66%;
+  margin: 0 auto;
 }
-.wrapper-projet .description p {
+.wrapper-projet .presentation-projet .first-p,
+.wrapper-projet .presentation-projet .first-p b {
+  color: #ba7954;
+  font-size: 1.25rem;
+  font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
+}
+.wrapper-projet .presentation-projet p {
   color: white;
   text-align: justify;
 }
-.wrapper-projet .description .first-p {
-  text-align: left;
-  border-top: 1px solid #ba7954;
-  padding-top: 2vh;
-}
-.wrapper-projet .description img {
-  width: inherit;
-  object-fit: contain;
-}
-.wrapper-projet .description .link {
-  margin-bottom: 0;
-}
-.wrapper-projet .description .link a {
-  color: #ba7954;
-  /* color: #5AC7C5; */
-}
+
 .wrapper-projet .tools {
   grid-column: 1 / 5;
   grid-row: 2;
@@ -431,10 +406,25 @@ ul .sous-menu {
   border-top: 1px solid #ba7954;
   padding-top: 2vh;
 }
+.wrapper-projet img {
+  width: 100%;
+}
+.wrapper-projet .tools img {
+  width: inherit;
+  object-fit: inherit;
+}
+.wrapper-projet .text p {
+  color: #ba7954;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
+    Verdana, sans-serif;
+  margin-top: 3rem;
+}
 
 /* ##### ANIMATION IMAGES ##### */
 @media (prefers-reduced-motion: no-preference) {
-  .wrapper > a {
+  .wrapper > .projet {
     scale: 0.8;
     opacity: 0;
     animation: fade-in linear forwards;
@@ -627,102 +617,30 @@ ul .sous-menu {
   grid-row: 35;
 }
 
-/* ##### CHARLES CANTIN ##### */
+/* ##### THANLS-BOSS ##### */
 
-.charles .logo-text {
+.boss .video1-text {
   grid-column: 1 / 5;
   grid-row: 3;
 }
-.charles .logo {
+.boss .video1 {
   grid-column: 1 / 5;
   grid-row: 4;
+  width: 100%;
 }
-.charles .mobilew-text {
+.boss .video2-text {
   grid-column: 1 / 5;
   grid-row: 5;
 }
-.charles .mobilew1 img,
-.charles .mobilew2 img,
-.charles .mobilew3 img,
-.charles .mobilew4 img {
-  border: solid 1px #1a3b3a;
-}
-.charles .mobilew1 {
-  grid-column: 1 / 3;
+.boss .video2 {
+  grid-column: 1 / 5;
   grid-row: 6;
+  width: 100%;
 }
-.charles .mobilew2 {
-  grid-column: 3 / 5;
-  grid-row: 6;
-}
-.charles .mobilew3 {
-  grid-column: 1 / 3;
-  grid-row: 7;
-}
-.charles .mobilew4 {
-  grid-column: 3 / 5;
-  grid-row: 7;
-}
-.charles .mobile-text {
-  grid-column: 1 / 5;
-  grid-row: 8;
-}
-.charles .mobile1 {
-  grid-column: 1 / 3;
-  grid-row: 9;
-}
-.charles .mobile2 {
-  grid-column: 3 / 5;
-  grid-row: 9;
-}
-.charles .mobile3 {
-  grid-column: 1 / 3;
-  grid-row: 10;
-}
-.charles .mobile4 {
-  grid-column: 3 / 5;
-  grid-row: 10;
-}
-.charles .desktopw-text {
-  grid-column: 1 / 5;
-  grid-row: 11;
-}
-.charles .desktopw1 {
-  grid-column: 1 / 5;
-  grid-row: 12;
-}
-.charles .desktopw2 {
-  grid-column: 1 / 5;
-  grid-row: 13;
-}
-.charles .desktopw3 {
-  grid-column: 1 / 5;
-  grid-row: 14;
-}
-.charles .desktopw4 {
-  grid-column: 1 / 5;
-  grid-row: 15;
-}
-.charles .desktop-text {
-  grid-column: 1 / 5;
-  grid-row: 16;
-}
-.charles .desktop1 {
-  grid-column: 1 / 5;
-  grid-row: 17;
-}
-.charles .desktop2 {
-  grid-column: 1 / 5;
-  grid-row: 18;
-}
-.charles .desktop3 {
-  grid-column: 1 / 5;
-  grid-row: 19;
-}
-.charles .desktop4 {
-  grid-column: 1 / 5;
-  grid-row: 20;
-}
+
+/* ##### MA TA VIE ##### */
+
+/* ##### CHARLES CANTIN ##### */
 
 /* ##### CAROLINE À L'ÉTRANGER ##### */
 
@@ -758,127 +676,15 @@ ul .sous-menu {
 
 /* ##### AV ##### */
 
-.av .zoning-text {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
-.av .zoning1 {
-  grid-column: 1 / 5;
-  grid-row: 4;
-}
-.av .zoning2 {
-  grid-column: 1 / 5;
-  grid-row: 5;
-}
-.av .zoning3 {
-  grid-column: 1 / 5;
-  grid-row: 6;
-}
-.av .zoning4 {
-  grid-column: 1 / 5;
-  grid-row: 7;
-}
-.av .zoning5 {
-  grid-column: 1 / 5;
-  grid-row: 8;
-}
-.av .zoning6 {
-  grid-column: 1 / 5;
-  grid-row: 9;
-}
-
 /* ##### DICE GAME ##### */
 
 /* ##### OUR SUPER MUSIC APP ##### */
 
 /* ##### CLIPBOARD ##### */
 
-.clipboard .desktop-text {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
-.clipboard .desktop1 {
-  grid-column: 1 / 5;
-  grid-row: 4;
-}
-.clipboard .desktop2 {
-  grid-column: 1 / 5;
-  grid-row: 5;
-}
-.clipboard .desktop3 {
-  grid-column: 1 / 5;
-  grid-row: 6;
-}
-.clipboard .desktopvideo {
-  grid-column: 1 / 5;
-  grid-row: 7;
-  width: 100%;
-}
-.clipboard .mobile1 {
-  grid-column: 1 / 3;
-  grid-row: 8;
-}
-.clipboard .mobile2 {
-  grid-column: 3 / 5;
-  grid-row: 8;
-}
-.clipboard .mobile3 {
-  grid-column: 1 / 3;
-  grid-row: 9;
-}
-.clipboard .mobilevideo {
-  grid-column: 3 / 5;
-  grid-row: 9;
-  width: 100%;
-}
-
 /* ##### ASSO ##### */
 
 /* ##### STRAY ##### */
-.stray .menu-text {
-  grid-column: 1 / 5;
-  grid-row: 3;
-}
-.stray .menu {
-  grid-column: 1 / 5;
-  grid-row: 4;
-}
-.stray .ingame-text {
-  grid-column: 1 / 5;
-  grid-row: 5;
-}
-.stray .ingame1 {
-  grid-column: 1 / 5;
-  grid-row: 6;
-}
-.stray .ingame2 {
-  grid-column: 1 / 5;
-  grid-row: 7;
-}
-.stray .ingame3 {
-  grid-column: 1 / 5;
-  grid-row: 8;
-}
-.stray .dialogue-text {
-  grid-column: 1 / 5;
-  grid-row: 9;
-}
-.stray .dialogue1 {
-  grid-column: 1 / 5;
-  grid-row: 10;
-}
-.stray .dialogue2 {
-  grid-column: 1 / 5;
-  grid-row: 11;
-}
-.stray .inventory-text {
-  grid-column: 1 / 5;
-  grid-row: 12;
-}
-.stray .inventory1 {
-  grid-column: 1 / 5;
-  grid-row: 13;
-}
 
 /* ################################################# */
 /* #################### DESKTOP #################### */
@@ -887,10 +693,6 @@ ul .sous-menu {
   #desktop {
     display: flex;
     justify-content: center;
-  }
-  #desktop .cv {
-    text-align: center;
-    justify-items: center;
   }
   #mobile {
     display: none;
@@ -914,9 +716,6 @@ ul .sous-menu {
   .navbar-brand {
     text-align: right;
   }
-  footer a svg:hover {
-    color: #377a79;
-  }
   .accordion-item > h3 {
     font-size: 1rem;
   }
@@ -924,7 +723,8 @@ ul .sous-menu {
   .navbar-brand:hover,
   .description .link a:hover,
   .dropdown > a:hover {
-    color: #7a5037;
+    color: #ba7954;
+    transform: translateY(2px);
   }
   .dropdown {
     margin-left: 0;
@@ -933,13 +733,16 @@ ul .sous-menu {
     color: #ba7954;
   }
   .presentation,
-  .cv,
+  .about {
+    width: 40%;
+  }
   .projets {
     width: 70%;
   }
-  .icones img {
-    width: 72px;
-    height: 72px;
+  .icones img,
+  .icones li {
+    width: 80px;
+    height: 80px;
   }
   .body {
     padding-top: 5%;
@@ -983,49 +786,57 @@ ul .sous-menu {
     text-align: center;
   }
 
-  .terre-vignette {
+  .mtavie-vignette {
     grid-column: 1 / 3;
     grid-row: 1;
   }
-  .caroline-vignette {
+  .av-vignette {
     grid-column: 3;
     grid-row: 1;
-  }
-  .agrume-vignette {
-    grid-column: 1;
-    grid-row: 2;
   }
   .charles-vignette {
     grid-column: 2 / 4;
     grid-row: 2;
   }
-  .av-vignette {
+  .caroline-vignette {
     grid-column: 1;
+    grid-row: 2;
+  }
+  .boss-vignette {
+    grid-column: 3;
     grid-row: 3;
+  }
+  .terre-vignette {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  .agrume-vignette {
+    grid-column: 1;
+    grid-row: 4;
   }
   .jungle-vignette {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
   }
   .music-vignette {
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 4;
   }
   .dice-vignette {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 5;
   }
   .clipboard-vignette {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 5;
   }
   .stray-vignette {
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 5;
   }
   .asso-vignette {
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 6;
   }
 
   /* ##### PROJET ##### */
@@ -1055,7 +866,7 @@ ul .sous-menu {
   .wrapper-projet .description {
     grid-column: 2 / 5;
     grid-row: 1;
-    color: #7a5037;
+    color: #ba7954;
   }
   .wrapper-projet .description .first-p {
     border-top: inherit;
