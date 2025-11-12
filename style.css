@@ -23,15 +23,13 @@
   font-family: "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-  height: 80px;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
+a,
+a b,
 .alt {
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
@@ -40,18 +38,23 @@ h5,
   font-variant-alternates: styleset(alt);
 }
 
+/* ########### titre principal ########### */
 h1 {
-  font-size: 4.5rem;
+  font-size: 2rem;
   color: #ba7954;
   font-weight: bold;
 }
 h1 span.code {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
+
+/* ########### je m'appelle Caroline. ########### */
 h2 {
-  font-size: 3rem;
+  font-size: 1.75rem;
 }
+
+/* ########### brand navbar ########### */
 h3 {
   font-size: 2rem;
   font-weight: bold;
@@ -62,29 +65,35 @@ h4 {
   font-weight: bold;
 }
 
+/* ########### titre about ########### */
 h5 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ba7954;
-  margin-bottom: 2rem;
-}
-h6 {
-  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
+/* ########### body ########### */
 body {
   background-color: #434343;
 }
 .body {
-  background: url("images/bandeau_moy_small.png") no-repeat;
+  background: url("images/bandeau_moy_small.png") no-repeat top center;
   background-size: cover;
   height: 100vh;
 }
 
-nav {
+/* ########### header nav ########### */
+
+.header {
   position: fixed;
   left: 0;
   z-index: 99999;
+  background-color: #434343;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
 .navbar-brand {
   color: #377a79;
@@ -102,7 +111,73 @@ a {
   list-style-type: disc;
   margin-left: 5%;
 }
+.header .hamburger {
+  position: fixed;
+  top: 0.75rem;
+  right: 1.5rem;
+}
+.header .bar {
+  background-color: #377a79;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #377a79;
+  text-decoration: none;
+}
+.menu-link {
+  cursor: pointer;
+}
+.menu-link img {
+  width: 16px;
+}
+.header a.active {
+  color: #ba7954;
+}
 
+/* #### menu hamburger #### */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ba7954;
+}
+.hamburger {
+  display: block;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.header-right {
+  position: fixed;
+  top: 50px;
+  right: -100%;
+  transition: 0.3s;
+  gap: 0;
+  flex-direction: column;
+  text-align: right;
+  width: 40vw;
+  background-color: #434343;
+}
+.header-right .menu-item {
+  margin: 1rem 0;
+  padding-right: 1rem;
+}
+.header-right.active {
+  right: 0;
+}
+
+/* ################################################# */
 .presentation,
 .about,
 .projets {
@@ -133,7 +208,7 @@ a {
   color: white;
   font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .presentation p,
 .presentation .dev b,
@@ -142,12 +217,12 @@ a {
   color: white;
   font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .presentation .buttons {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .presentation .buttons .button {
   background-color: #377a79;
@@ -160,15 +235,19 @@ a {
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  margin-top: 2rem;
+  text-align: center;
 }
 .presentation .buttons .button b {
   font-family: "MuseoModerno-Black", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
 }
-
 .presentation .buttons .button:hover {
   background-color: #ba7954;
   transform: translateY(2px);
+}
+.presentation .buttons img {
+  display: none;
 }
 
 .presentation .arrows,
@@ -188,7 +267,6 @@ a {
 .competences-techniques p,
 .competences-techniques p b {
   margin-top: 2rem;
-  font-size: 1.25rem;
 }
 .icones {
   display: flex;
@@ -207,84 +285,11 @@ a {
   text-align: left;
 }
 
-.dropdown-menu,
-.dropdown-item {
-  color: #377a79;
-  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-    Verdana, sans-serif;
-  font-weight: bold;
-}
-ul u {
-  color: #ba7954;
-  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-    Verdana, sans-serif;
-  font-weight: bold;
-}
-ul .sous-menu {
-  color: #ba7954;
-  list-style-type: circle;
-}
-.dropdown-item:hover,
-.dropdown-item:hover u,
-.dropdown-item:focus {
-  color: #ba7954;
-  transform: translateY(2px);
-}
-.dropdown {
-  margin-left: -2%;
-}
-.dropdown .btn {
-  color: white;
-  border: inherit;
-  border-radius: 5px;
-}
-.dropdown .btn:focus {
-  border-color: #ba7954;
-}
-
 #desktop {
   display: none;
 }
 #mobile {
   display: block;
-}
-
-.accordion {
-  border-bottom: 1px solid #7a5037;
-}
-.accordion-item {
-  border: 1px solid #7a5037;
-  background: rgba(255, 255, 255, 30%);
-}
-.accordion-item button svg,
-.accordion-item .accordion-body svg {
-  margin-right: 8px;
-}
-.accordion-button {
-  color: #7a5037;
-  background: rgba(255, 255, 255, 70%);
-  font-size: inherit;
-}
-.accordion-button:focus {
-  box-shadow: inherit;
-}
-.accordion-button:not(.collapsed) {
-  color: inherit;
-  background: #ba7954;
-  color: white;
-}
-.accordion-button:not(.collapsed) svg {
-  fill: white;
-}
-.accordion-button:not(.collapsed)::after {
-  filter: brightness(0%) invert(100%);
-}
-.accordion-body,
-.accordion-body a {
-  color: white;
-}
-.accordion-body ul {
-  margin-left: -25px;
 }
 
 /* ##### PROJETS ##### */
@@ -330,44 +335,44 @@ ul .sous-menu {
   grid-row: 1;
   background-image: url("./images/mtavie/bandeau-a-propos.png");
 }
-.boss-vignette {
+.av-vignette {
   grid-column: 1;
   grid-row: 2;
-  background-image: url("./images/thanksboss/about-candidature-bg2.png");
-}
-.terre-vignette {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url("./images/terredethes/vignette.png");
+  background-image: url("./images/av/vignette.jpg");
 }
 .charles-vignette {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
   background-image: url("./images/charlescantin/vignette.jpg");
 }
 .caroline-vignette {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 4;
   background-image: url("./images/carolinealetranger/logo.JPG");
+}
+.terre-vignette {
+  grid-column: 1;
+  grid-row: 5;
+  background-image: url("./images/terredethes/vignette.png");
+}
+.boss-vignette {
+  grid-column: 1;
+  grid-row: 6;
+  background-image: url("./images/thanksboss/about-candidature-bg2.png");
 }
 .agrume-vignette {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 7;
   background-image: url("./images/lagrumeindigo/gym.jpg");
-}
-.av-vignette {
-  grid-column: 1;
-  grid-row: 5;
-  background-image: url("./images/av/vignette.jpg");
 }
 .jungle-vignette {
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 8;
   background-image: url("./images/lajungleverte/vignette.png");
 }
 .music-vignette {
   grid-column: 1;
-  grid-row: 7;
+  grid-row: 9;
   background-image: url("./images/oursupermusicapp/logo.png");
 }
 
@@ -377,11 +382,12 @@ ul .sous-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2vh;
+  padding-bottom: 28vh;
 }
 .wrapper-projet .presentation-projet {
   grid-column: 1 / 5;
   grid-row: 1 / auto;
-  width: 66%;
+  width: 95%;
   margin: 0 auto;
 }
 .wrapper-projet .presentation-projet .first-p,
@@ -617,7 +623,7 @@ ul .sous-menu {
   grid-row: 35;
 }
 
-/* ##### THANLS-BOSS ##### */
+/* ##### THANKS-BOSS ##### */
 
 .boss .video1-text {
   grid-column: 1 / 5;
@@ -637,12 +643,6 @@ ul .sous-menu {
   grid-row: 6;
   width: 100%;
 }
-
-/* ##### MA TA VIE ##### */
-
-/* ##### CHARLES CANTIN ##### */
-
-/* ##### CAROLINE À L'ÉTRANGER ##### */
 
 /* ##### L'AGRUME INDIGO ##### */
 
@@ -674,71 +674,122 @@ ul .sous-menu {
   width: 100%;
 }
 
-/* ##### AV ##### */
-
-/* ##### DICE GAME ##### */
-
-/* ##### OUR SUPER MUSIC APP ##### */
-
-/* ##### CLIPBOARD ##### */
-
-/* ##### ASSO ##### */
-
-/* ##### STRAY ##### */
-
 /* ################################################# */
 /* #################### DESKTOP #################### */
 /* ################################################# */
 @media screen and (min-width: 992px) {
-  #desktop {
-    display: flex;
-    justify-content: center;
+  .presentation,
+  .about {
+    width: 90%;
   }
-  #mobile {
-    display: none;
+  .projets {
+    width: 90%;
   }
-
   iframe {
     width: 775px;
     height: 2190px;
   }
-
-  #desktop .accordion {
-    width: 775px;
-    margin-top: 5rem;
-  }
-  #desktop .accordion-body {
-    font-size: 1rem;
-  }
 }
 
 @media screen and (min-width: 1080px) {
+  .header {
+    background-color: inherit;
+  }
+  .header-right {
+    background-color: inherit;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+  h1 span.code {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h5 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .presentation,
+  .about {
+    width: 70%;
+  }
+  .projets {
+    width: 80%;
+  }
+
+  .presentation .intro,
+  .presentation p b {
+    font-size: 2rem;
+  }
+  .presentation p,
+  .presentation .dev b,
+  .about p,
+  .about p b {
+    font-size: 1.5rem;
+  }
+
+  .presentation .buttons {
+    flex-direction: inherit;
+    justify-content: space-between;
+  }
+  .presentation .buttons .button {
+    margin-top: 0rem;
+    text-align: inherit;
+  }
+  .presentation .buttons img {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    transition: inherit;
+    gap: 1.5rem;
+    flex-direction: inherit;
+    text-align: inherit;
+    background-image: inherit;
+    width: inherit;
+  }
+  .header-right .menu-item {
+    padding-right: inherit;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+  }
+  .header-right.active {
+    right: inherit;
+  }
+  .menu-link:hover,
+  .navbar-brand:hover {
+    color: #ba7954;
+  }
+  .header a.active:hover {
+    color: white;
+  }
+
   .navbar-brand {
-    text-align: right;
+    text-align: left;
   }
-  .accordion-item > h3 {
-    font-size: 1rem;
-  }
+
   a:hover,
   .navbar-brand:hover,
-  .description .link a:hover,
-  .dropdown > a:hover {
+  .description .link a:hover {
     color: #ba7954;
     transform: translateY(2px);
-  }
-  .dropdown {
-    margin-left: 0;
   }
   h3 a:hover {
     color: #ba7954;
   }
-  .presentation,
-  .about {
-    width: 40%;
-  }
-  .projets {
-    width: 70%;
-  }
+
   .icones img,
   .icones li {
     width: 80px;
@@ -746,17 +797,6 @@ ul .sous-menu {
   }
   .body {
     padding-top: 5%;
-  }
-
-  .accordion-button:hover {
-    color: white;
-    background: #377a79;
-  }
-  .accordion-body {
-    font-size: 0.75rem;
-  }
-  .accordion-body ul {
-    text-align: justify;
   }
 
   /* ##### PROJETS ##### */
@@ -822,25 +862,12 @@ ul .sous-menu {
     grid-column: 3;
     grid-row: 4;
   }
-  .dice-vignette {
-    grid-column: 1;
-    grid-row: 5;
-  }
-  .clipboard-vignette {
-    grid-column: 2;
-    grid-row: 5;
-  }
-  .stray-vignette {
-    grid-column: 3;
-    grid-row: 5;
-  }
-  .asso-vignette {
-    grid-column: 3;
-    grid-row: 6;
-  }
 
   /* ##### PROJET ##### */
 
+  .wrapper-projet .presentation-projet {
+    width: 66%;
+  }
   .wrapper-projet .text {
     font-size: 1rem;
   }
@@ -874,15 +901,6 @@ ul .sous-menu {
   }
 
   /* ##### TERRE DE THÉS ##### */
-
-  .terre .title {
-    /*background-image: url("./images/terredethes/logo1.png");*/
-    font-family: "Grenadier", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #405554;
-    color: #9a6f26;
-  }
-
   .terre .logo1 {
     grid-column: 1;
     grid-row: 6;
@@ -1028,201 +1046,24 @@ ul .sous-menu {
     grid-column: 3 / 5;
     grid-row: 26;
   }
+}
 
-  /* ##### CHARLES CANTIN ##### */
+@media screen and (min-width: 1440px) {
+  .presentation,
+  .about {
+    width: 50%;
+  }
+  .projets {
+    width: 80%;
+  }
+}
 
-  .charles .title {
-    /*background-image: url("./images/charlescantin/vignette.jpg");*/
-    font-family: "NovaMono", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #47555e;
-    color: #eeeeee;
+@media screen and (min-width: 1920px) {
+  .presentation,
+  .about {
+    width: 40%;
   }
-  .charles .logo {
-    grid-column: 2 / 4;
-    grid-row: 4;
-  }
-  .charles .mobilew1 {
-    grid-column: 1;
-    grid-row: 6;
-  }
-  .charles .mobilew2 {
-    grid-column: 2;
-    grid-row: 6;
-  }
-  .charles .mobilew3 {
-    grid-column: 3;
-    grid-row: 6;
-  }
-  .charles .mobilew4 {
-    grid-column: 4;
-    grid-row: 6;
-  }
-  .charles .mobile-text {
-    grid-column: 1 / 5;
-    grid-row: 7;
-  }
-  .charles .mobile1 {
-    grid-column: 1;
-    grid-row: 8;
-  }
-  .charles .mobile2 {
-    grid-column: 2;
-    grid-row: 8;
-  }
-  .charles .mobile3 {
-    grid-column: 3;
-    grid-row: 8;
-  }
-  .charles .mobile4 {
-    grid-column: 4;
-    grid-row: 8;
-  }
-  .charles .desktopw-text {
-    grid-column: 1 / 5;
-    grid-row: 9;
-  }
-  .charles .desktopw1 {
-    grid-column: 1 / 5;
-    grid-row: 10;
-  }
-  .charles .desktopw2 {
-    grid-column: 1 / 5;
-    grid-row: 11;
-  }
-  .charles .desktopw3 {
-    grid-column: 1 / 5;
-    grid-row: 12;
-  }
-  .charles .desktopw4 {
-    grid-column: 1 / 5;
-    grid-row: 13;
-  }
-  .charles .desktop-text {
-    grid-column: 1 / 5;
-    grid-row: 14;
-  }
-  .charles .desktop1 {
-    grid-column: 1 / 5;
-    grid-row: 15;
-  }
-  .charles .desktop2 {
-    grid-column: 1 / 5;
-    grid-row: 16;
-  }
-  .charles .desktop3 {
-    grid-column: 1 / 5;
-    grid-row: 17;
-  }
-  .charles .desktop4 {
-    grid-column: 1 / 5;
-    grid-row: 18;
-  }
-
-  /* ##### CAROLINE À L'ÉTRANGER ##### */
-
-  .caroline .title {
-    /*background-image: url("./images/carolinealetranger/logo.JPG");*/
-    font-family: "Love", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
-    background-color: #373737;
-    color: white;
-    font-size: 3rem;
-    line-height: 2rem;
-  }
-
-  /* ##### L'AGRUME INDIGO ##### */
-
-  .agrume .title {
-    font-family: "Architecs_Daughter", "Century Gothic", "Segoe UI", Tahoma,
-      Geneva, Verdana, sans-serif;
-    background-color: #002b58;
-    color: #ec994b;
-  }
-
-  /* ##### AV ##### */
-
-  .av .title {
-    /*background-image: url("./images/av/logo.png");*/
-    font-family: "20-db", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
-    background-color: #dd9933;
-    color: black;
-  }
-
-  /* ##### DICE GAME ##### */
-
-  .dice .title {
-    /*background-image: url("./images/dicegame/vignette.png");*/
-    font-family: "Lato", "Century Gothic", "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
-    background-color: rgb(241, 241, 241);
-    color: red;
-  }
-
-  /* ##### LA JUNGLE VERTE ##### */
-
-  .jungle .title {
-    font-family: "Segoe UI", "Century Gothic", Tahoma, Geneva, Verdana,
-      sans-serif;
-    background-color: #31b472;
-    color: white;
-  }
-
-  /* ##### OUR SUPER MUSIC APP ##### */
-
-  .music .title {
-    /*background-image: url("./images/oursupermusicapp/logo.png");*/
-    font-family: "Montserrat", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #f9e4d4;
-    color: #470d21;
-  }
-
-  /* ##### CLIPBOARD ##### */
-
-  .clipboard .title {
-    /*background-image: url("./images/clipboard/logo.png");*/
-    font-family: "Bai_Jamjuree", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #e8e9ea;
-    color: #26baa4;
-  }
-
-  .clipboard .mobile1 {
-    grid-column: 1;
-    grid-row: 8;
-  }
-  .clipboard .mobile2 {
-    grid-column: 2;
-    grid-row: 8;
-  }
-  .clipboard .mobile3 {
-    grid-column: 3;
-    grid-row: 8;
-  }
-  .clipboard .mobilevideo {
-    grid-column: 4;
-    grid-row: 8;
-    width: 100%;
-  }
-
-  /* ##### ASSO ##### */
-
-  .asso .title {
-    /*background-image: url("./images/associationdevignobles/vignette.png");*/
-    font-family: "astron_boy", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #f6f6f6;
-    color: rgb(129, 22, 85);
-  }
-
-  /* ##### STRAY ##### */
-
-  .stray .title {
-    font-family: "Sevenfold", "Century Gothic", "Segoe UI", Tahoma, Geneva,
-      Verdana, sans-serif;
-    background-color: #e9eef3;
-    color: #01b9f6;
+  .projets {
+    width: 70%;
   }
 }
