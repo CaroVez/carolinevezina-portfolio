@@ -89,7 +89,7 @@ body {
   position: fixed;
   left: 0;
   z-index: 99999;
-  background-color: #434343;
+  background: url("images/bandeau_moy_small.png") no-repeat top center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,7 +197,7 @@ a {
 }
 .presentation h1,
 .presentation-projet h1 {
-  margin: 9rem 0;
+  padding: 9rem 0;
 }
 .presentation h2 {
   color: white;
@@ -693,7 +693,7 @@ a {
 
 @media screen and (min-width: 1080px) {
   .header {
-    background-color: inherit;
+    background: inherit;
   }
   .header-right {
     background-color: inherit;
