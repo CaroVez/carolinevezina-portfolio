@@ -96,7 +96,7 @@ body {
   padding: 0 24px;
 }
 .navbar-brand {
-  color: #377a79;
+  color: #479796;
 }
 ul {
   display: flex;
@@ -117,13 +117,13 @@ a {
   right: 1.5rem;
 }
 .header .bar {
-  background-color: #377a79;
+  background-color: #479796;
 }
 li {
   list-style: none;
 }
 a {
-  color: #377a79;
+  color: #479796;
   text-decoration: none;
 }
 .menu-link {
@@ -189,7 +189,7 @@ a {
   padding-bottom: 2vh;
 }
 .about {
-  padding-top: 5vh;
+  padding-top: 30vh;
 }
 .experience,
 .competences-techniques {
@@ -197,7 +197,7 @@ a {
 }
 .presentation h1,
 .presentation-projet h1 {
-  padding: 9rem 0;
+  padding: 9rem 0 5rem 0;
 }
 .presentation h2 {
   color: white;
@@ -225,7 +225,7 @@ a {
   flex-direction: column;
 }
 .presentation .buttons .button {
-  background-color: #377a79;
+  background-color: #479796;
   color: black;
   border: black solid 1px;
   border-radius: 5px;
@@ -299,7 +299,7 @@ a {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5vh;
   grid-auto-rows: minmax(85vw, auto);
-  padding-top: 18vh;
+  padding-top: 40vh;
   padding-bottom: 12vh;
 }
 .projet {
@@ -333,7 +333,7 @@ a {
 .mtavie-vignette {
   grid-column: 1;
   grid-row: 1;
-  background-image: url("./images/mtavie/bandeau-a-propos.png");
+  background-image: url("./images/mtavie/vignette.png");
 }
 .av-vignette {
   grid-column: 1;
@@ -358,7 +358,7 @@ a {
 .boss-vignette {
   grid-column: 1;
   grid-row: 6;
-  background-image: url("./images/thanksboss/about-candidature-bg2.png");
+  background-image: url("./images/thanksboss/logo-tb-yellow.png");
 }
 .agrume-vignette {
   grid-column: 1;
@@ -720,6 +720,11 @@ a {
     width: 80%;
   }
 
+  .presentation h1,
+  .presentation-projet h1 {
+    padding: 9rem 0;
+  }
+
   .presentation .intro,
   .presentation p b {
     font-size: 2rem;
@@ -741,6 +746,10 @@ a {
   }
   .presentation .buttons img {
     display: block;
+  }
+
+  .about {
+    padding-top: 5vh;
   }
 
   .hamburger {
@@ -804,6 +813,7 @@ a {
   .wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(45vh, auto);
+    padding-top: 18vh;
   }
   .projet .overlay {
     display: none;
