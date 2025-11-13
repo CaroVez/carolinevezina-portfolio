@@ -30,20 +30,18 @@ const MOBILE_BREAK = 991;
 
 function applyHeaderMobileStyles(isLight) {
   // image mobile (change paths si besoin)
-  const headerImg = isLight
-    ? 'url("images/bandeau_light_small.png")'
-    : 'url("images/bandeau_moy_small.png")';
+  const headerImg = isLight ? "#e8e9ea" : "#474747";
 
   // couleur .header-right mobile
-  const headerRightBg = isLight ? "#e8e9ea" : "#434343";
+  const headerRightBg = isLight ? "#e8e9ea" : "#474747";
 
   // n'affecte que si on est en mobile
   if (window.innerWidth <= MOBILE_BREAK) {
-    header.style.backgroundImage = headerImg;
+    header.style.backgroundColor = headerImg;
     navMenu.style.backgroundColor = headerRightBg;
   } else {
     // en desktop, restaure style inline (ne pas écraser les règles CSS desktop)
-    header.style.backgroundImage = "";
+    header.style.backgroundColor = "";
     navMenu.style.backgroundColor = "";
   }
 }

@@ -175,7 +175,6 @@ body.light .icon-moon {
   position: fixed;
   left: 0;
   z-index: 99999;
-  background: url("images/bandeau_moy_small.png") no-repeat top center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -875,9 +874,7 @@ a {
   .hamburger {
     display: none;
   }
-  .header {
-    background: inherit;
-  }
+
   .header-right {
     background-color: inherit;
     background-image: inherit;
