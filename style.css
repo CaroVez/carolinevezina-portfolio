@@ -105,7 +105,7 @@ h5 {
 /* ===== Variables ===== */
 :root {
   --bg-color-dark: #434343;
-  --bg-color-light: white;
+  --bg-color-light: #e8e9ea;
   --text-color-dark: white;
   --text-color-light: black;
   --transition-time: 0.4s;
@@ -401,7 +401,7 @@ a {
 }
 .service {
   color: var(--text-color-light);
-  background-color: var(--bg-color-light);
+  background-color: white;
   border-radius: 5px;
   border: solid 1px black;
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
