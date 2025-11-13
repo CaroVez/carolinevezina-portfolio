@@ -30,7 +30,8 @@ h4,
 h5,
 a,
 a b,
-.alt {
+.alt,
+.typewriter {
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
 }
@@ -47,6 +48,32 @@ h1 {
 h1 span.code {
   font-size: 1.5rem;
   font-weight: normal;
+}
+.presentation h1,
+.presentation-projet h1 {
+  padding: 9rem 0 5rem 0;
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #fff; /* curseur */
+  white-space: nowrap;
+  animation: typing 2s steps(20, end), blink 1s step-end infinite;
+}
+/* effet d’écriture */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* curseur clignotant */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* ########### je m'appelle Caroline. ########### */
@@ -179,8 +206,10 @@ a {
 
 /* ################################################# */
 .presentation,
+.contact,
 .about,
-.projets {
+.projets,
+.services {
   margin: 0 auto;
 }
 .presentation,
@@ -189,16 +218,14 @@ a {
   padding-bottom: 2vh;
 }
 .about {
-  padding-top: 30vh;
+  padding-top: 6vh;
 }
+.historique,
 .experience,
 .competences-techniques {
   padding-top: 16vh;
 }
-.presentation h1,
-.presentation-projet h1 {
-  padding: 9rem 0 5rem 0;
-}
+
 .presentation h2 {
   color: white;
   font-weight: bold;
@@ -212,19 +239,27 @@ a {
 }
 .presentation p,
 .presentation .dev b,
-.about p,
 .about p b {
   color: white;
   font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
+}
+.presentation p,
+.presentation .dev b {
+  font-size: 1.5rem;
+}
+.about p {
+  color: white;
+}
+.about p b {
   font-size: 1rem;
 }
-.presentation .buttons {
+.buttons {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
-.presentation .buttons .button {
+.buttons .button {
   background-color: #479796;
   color: black;
   border: black solid 1px;
@@ -238,35 +273,55 @@ a {
   margin-top: 2rem;
   text-align: center;
 }
-.presentation .buttons .button b {
+.buttons .button b {
   font-family: "MuseoModerno-Black", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
 }
-.presentation .buttons .button:hover {
+.buttons .button:hover {
   background-color: #ba7954;
   transform: translateY(2px);
 }
-.presentation .buttons img {
+.buttons img {
   display: none;
 }
 
 .presentation .arrows,
 .presentation-projet .arrows {
-  display: grid;
-  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
   color: #ba7954;
   margin-top: 4.5rem;
 }
-
-.experience p,
-.historique p {
-  font-family: "MuseoModerno-Light", "Century Gothic", "Segoe UI", Tahoma,
-    Geneva, Verdana, sans-serif;
+.arrows svg {
+  opacity: 0;
+  animation: blinkArrow 1.5s infinite;
+}
+/* décalage progressif entre les 3 flèches */
+.arrows svg:nth-child(1) {
+  animation-delay: 0s;
+}
+.arrows svg:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.arrows svg:nth-child(3) {
+  animation-delay: 0.6s;
+}
+@keyframes blinkArrow {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
 }
 
-.competences-techniques p,
-.competences-techniques p b {
-  margin-top: 2rem;
+.competences-techniques p {
+  margin-bottom: 5rem;
 }
 .icones {
   display: flex;
@@ -281,26 +336,37 @@ a {
   height: 80px;
 }
 
-.projets {
-  text-align: left;
-}
+/* ##### PROJETS / SERVICES ##### */
 
-#desktop {
-  display: none;
-}
-#mobile {
-  display: block;
-}
-
-/* ##### PROJETS ##### */
-
+.wrapper-services,
 .wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5vh;
   grid-auto-rows: minmax(85vw, auto);
-  padding-top: 40vh;
+  padding-top: 6vh;
   padding-bottom: 12vh;
+}
+.service {
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px black;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  /* center overlay content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+.service h3 img {
+  margin-right: 1rem;
 }
 .projet {
   display: flex;
@@ -320,6 +386,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
+  padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.3);
   text-shadow: rgb(0, 0, 0) 0 0 4px;
   border-radius: 5px;
@@ -430,6 +497,7 @@ a {
 
 /* ##### ANIMATION IMAGES ##### */
 @media (prefers-reduced-motion: no-preference) {
+  .wrapper-services > .service,
   .wrapper > .projet {
     scale: 0.8;
     opacity: 0;
@@ -679,6 +747,7 @@ a {
 /* ################################################# */
 @media screen and (min-width: 992px) {
   .presentation,
+  .services,
   .about {
     width: 90%;
   }
@@ -713,6 +782,7 @@ a {
   }
 
   .presentation,
+  .services,
   .about {
     width: 70%;
   }
@@ -736,20 +806,23 @@ a {
     font-size: 1.5rem;
   }
 
-  .presentation .buttons {
+  .buttons {
     flex-direction: inherit;
     justify-content: space-between;
   }
-  .presentation .buttons .button {
+  .buttons .button {
     margin-top: 0rem;
     text-align: inherit;
   }
-  .presentation .buttons img {
+  .buttons img {
     display: block;
+  }
+  .about .buttons {
+    margin: 20vh 0 12vh 0;
   }
 
   .about {
-    padding-top: 5vh;
+    padding-top: 0;
   }
 
   .hamburger {
@@ -808,8 +881,17 @@ a {
     padding-top: 5%;
   }
 
-  /* ##### PROJETS ##### */
+  /* ##### PROJETS / SERVICES ##### */
 
+  .wrapper-services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(45vh, auto);
+    padding-top: 18vh;
+  }
+  .service {
+    padding: 3rem 3rem;
+    align-items: inherit;
+  }
   .wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(45vh, auto);
@@ -834,6 +916,19 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .figma {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .wordpress {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  .custom {
+    grid-column: 1 / 3;
+    grid-row: 3;
   }
 
   .mtavie-vignette {
@@ -1060,6 +1155,8 @@ a {
 
 @media screen and (min-width: 1440px) {
   .presentation,
+  .services,
+  .contact,
   .about {
     width: 50%;
   }
@@ -1070,6 +1167,8 @@ a {
 
 @media screen and (min-width: 1920px) {
   .presentation,
+  .services,
+  .contact,
   .about {
     width: 40%;
   }
