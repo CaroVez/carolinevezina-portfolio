@@ -101,17 +101,75 @@ h5 {
 }
 
 /* ########### body ########### */
-body {
-  background-color: #434343;
+/* ===== Variables ===== */
+:root {
+  --bg-color-dark: #434343;
+  --bg-color-light: white;
+  --text-color-dark: white;
+  --text-color-light: black;
+  --transition-time: 0.4s;
 }
-.body {
-  background: url("images/bandeau_moy_small.png") no-repeat top center;
+
+body {
+  color: var(--text-color-dark);
+  transition: background-color var(--transition-time),
+    color var(--transition-time);
+}
+/* Image en dark */
+body.dark-bg {
+  background: var(--bg-color-dark) url("images/bandeau_moy_small.png") no-repeat
+    top center;
   background-size: cover;
   height: 100vh;
 }
+/* Image en light */
+body.light.light-bg {
+  background: var(--bg-color-light) url("images/bandeau_light_small.png")
+    no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+/* Light mode */
+body.light {
+  color: var(--text-color-light);
+}
+
+/* ===== Bouton thème ===== */
+#theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+/* Icônes superposées */
+.icon-sun,
+.icon-moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  transition: opacity var(--transition-time) ease;
+}
+
+/* Icône soleil visible par défaut (dark mode) */
+.icon-sun {
+  opacity: 1;
+}
+/* Icône lune cachée par défaut */
+.icon-moon {
+  opacity: 0;
+}
+
+/* Quand on est en light mode */
+body.light .icon-sun {
+  opacity: 0;
+}
+body.light .icon-moon {
+  opacity: 1;
+}
 
 /* ########### header nav ########### */
-
 .header {
   position: fixed;
   left: 0;
@@ -194,7 +252,7 @@ a {
   flex-direction: column;
   text-align: right;
   width: 40vw;
-  background-color: #434343;
+  background-color: var(--bg-color-dark);
 }
 .header-right .menu-item {
   margin: 1rem 0;
@@ -227,12 +285,10 @@ a {
 }
 
 .presentation h2 {
-  color: white;
   font-weight: bold;
 }
 .presentation .intro,
 .presentation p b {
-  color: white;
   font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -240,16 +296,12 @@ a {
 .presentation p,
 .presentation .dev b,
 .about p b {
-  color: white;
   font-family: "MuseoModerno-light", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
 }
 .presentation p,
 .presentation .dev b {
   font-size: 1.5rem;
-}
-.about p {
-  color: white;
 }
 .about p b {
   font-size: 1rem;
@@ -348,7 +400,8 @@ a {
   padding-bottom: 12vh;
 }
 .service {
-  background-color: #fff;
+  color: var(--text-color-light);
+  background-color: var(--bg-color-light);
   border-radius: 5px;
   border: solid 1px black;
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
@@ -380,7 +433,7 @@ a {
   display: contents;
 }
 .projet .overlay {
-  color: white;
+  color: var(--text-color-dark);
   position: relative;
   height: 100%;
   width: 100%;
@@ -465,14 +518,12 @@ a {
     Geneva, Verdana, sans-serif;
 }
 .wrapper-projet .presentation-projet p {
-  color: white;
   text-align: justify;
 }
 
 .wrapper-projet .tools {
   grid-column: 1 / 5;
   grid-row: 2;
-  color: white;
   text-align: center;
   border-bottom: 1px solid #ba7954;
   padding-bottom: 2vh;
@@ -761,12 +812,6 @@ a {
 }
 
 @media screen and (min-width: 1080px) {
-  .header {
-    background: inherit;
-  }
-  .header-right {
-    background-color: inherit;
-  }
   h1 {
     font-size: 4.5rem;
   }
@@ -828,19 +873,24 @@ a {
   .hamburger {
     display: none;
   }
+  .header {
+    background: inherit;
+  }
   .header-right {
+    background-color: inherit;
+    background-image: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: inherit;
+    position: static;
     top: inherit;
     right: inherit;
     transition: inherit;
     gap: 1.5rem;
     flex-direction: inherit;
     text-align: inherit;
-    background-image: inherit;
     width: inherit;
+    height: 60px;
   }
   .header-right .menu-item {
     padding-right: inherit;
@@ -850,26 +900,23 @@ a {
   .header-right.active {
     right: inherit;
   }
-  .menu-link:hover,
-  .navbar-brand:hover {
-    color: #ba7954;
-  }
   .header a.active:hover {
-    color: white;
+    color: var(--text-color-dark);
   }
-
   .navbar-brand {
     text-align: left;
   }
 
+  a,
+  .navbar-brand {
+    display: inline-block; /* permet le transform */
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
   a:hover,
-  .navbar-brand:hover,
-  .description .link a:hover {
+  a svg:hover,
+  .navbar-brand:hover {
     color: #ba7954;
     transform: translateY(2px);
-  }
-  h3 a:hover {
-    color: #ba7954;
   }
 
   .icones img,
@@ -902,7 +949,6 @@ a {
   }
   .projet:hover .overlay {
     display: contents;
-    color: white;
     position: relative;
     height: 100%;
     width: 100%;
