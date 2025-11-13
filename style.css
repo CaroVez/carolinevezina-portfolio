@@ -273,7 +273,7 @@ a {
 }
 .presentation,
 .about {
-  text-align: justify;
+  text-align: center;
   padding-bottom: 2vh;
 }
 .about {
@@ -801,6 +801,7 @@ a {
   .presentation,
   .services,
   .about {
+    text-align: justify;
     width: 90%;
   }
   .projets {
