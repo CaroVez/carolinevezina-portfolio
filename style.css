@@ -104,10 +104,10 @@ h5 {
 /* ########### body ########### */
 /* ===== Variables ===== */
 :root {
-  --bg-color-dark: #434343;
-  --bg-color-light: #e8e9ea;
-  --text-color-dark: white;
-  --text-color-light: black;
+  --bg-color-dark: #494949;
+  --bg-color-light: #f2f2f2;
+  --text-color-dark: rgb(240, 240, 240);
+  --text-color-light: rgb(10, 10, 10);
   --transition-time: 0.4s;
 }
 
@@ -300,8 +300,8 @@ a {
 }
 .buttons .button {
   background-color: #479796;
-  color: black;
-  border: black solid 1px;
+  color: var(--text-color-light);
+  border: var(--text-color-light) solid 1px;
   border-radius: 5px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -390,7 +390,7 @@ a {
   color: var(--text-color-light);
   background-color: white;
   border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px var(--text-color-light);
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
   position: relative;
   height: 100%;
@@ -413,7 +413,7 @@ a {
   background-size: cover;
   background-position: center;
   border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px var(--text-color-light);
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
 }
 .projet .overlay {

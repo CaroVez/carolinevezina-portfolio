@@ -15,10 +15,10 @@ const MOBILE_BREAK = 1079;
 
 function applyHeaderMobileStyles(isLight) {
   // image mobile (change paths si besoin)
-  const headerBg = isLight ? "#e8e9ea" : "#474747";
+  const headerBg = isLight ? "#f2f2f2" : "#494949";
 
   // couleur .header-right mobile
-  const headerRightBg = isLight ? "#e8e9ea" : "#474747";
+  const headerRightBg = isLight ? "#f2f2f2" : "#494949";
 
   // n'affecte que si on est en mobile
   if (window.innerWidth <= MOBILE_BREAK) {
