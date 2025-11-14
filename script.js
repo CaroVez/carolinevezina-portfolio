@@ -26,7 +26,7 @@ menuLinks.forEach((n) =>
 );
 
 // ########### THEME LOGIC ########### //
-const MOBILE_BREAK = 991;
+const MOBILE_BREAK = 1079;
 
 function applyHeaderMobileStyles(isLight) {
   // image mobile (change paths si besoin)

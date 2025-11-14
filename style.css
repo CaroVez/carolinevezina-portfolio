@@ -52,7 +52,7 @@ h1 span.code {
 }
 .presentation h1,
 .presentation-projet h1 {
-  padding: 9rem 0 5rem 0;
+  padding: 8rem 0 4rem 0;
 }
 .typewriter {
   display: inline-block;
@@ -172,16 +172,16 @@ body.light .icon-moon {
 
 /* ########### header nav ########### */
 .header {
-  position: fixed;
-  left: 0;
-  z-index: 99999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .navbar-brand {
   color: #479796;
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 9999;
 }
 ul {
   display: flex;
@@ -232,7 +232,7 @@ a {
   background-color: #ba7954;
 }
 .hamburger {
-  display: block;
+  display: none;
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
@@ -245,14 +245,14 @@ a {
 }
 .header-right {
   position: fixed;
-  top: 50px;
-  right: -100%;
-  transition: 0.3s;
-  gap: 0;
-  flex-direction: column;
-  text-align: right;
-  width: 40vw;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   background-color: var(--bg-color-dark);
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .header-right .menu-item {
   margin: 1rem 0;
@@ -260,6 +260,20 @@ a {
 }
 .header-right.active {
   right: 0;
+}
+
+/* masquer les textes, garder les icônes */
+.header-right .menu-link b,
+.header-right .menu-link u,
+.header-right .menu-link span {
+  display: none;
+}
+
+/* icônes visibles */
+.header-right .menu-link svg,
+.header-right .menu-link img {
+  width: 24px;
+  height: 24px;
 }
 
 /* ################################################# */
@@ -310,13 +324,15 @@ a {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 .buttons .button {
   background-color: #479796;
   color: black;
   border: black solid 1px;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
@@ -333,8 +349,9 @@ a {
   background-color: #ba7954;
   transform: translateY(2px);
 }
-.buttons img {
-  display: none;
+.buttons svg {
+  height: 24px;
+  width: 24px;
 }
 
 .presentation .arrows,
@@ -855,10 +872,12 @@ a {
   .buttons {
     flex-direction: inherit;
     justify-content: space-between;
+    width: 100%;
   }
   .buttons .button {
     margin-top: 0rem;
     text-align: inherit;
+    padding: 1rem 1.5rem;
   }
   .buttons img {
     display: block;
@@ -875,21 +894,31 @@ a {
     display: none;
   }
 
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 1rem;
+  }
+
   .header-right {
     background-color: inherit;
     background-image: inherit;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: static;
     top: inherit;
     right: inherit;
     transition: inherit;
     gap: 1.5rem;
-    flex-direction: inherit;
     text-align: inherit;
-    width: inherit;
-    height: 60px;
+    flex-direction: row;
+    width: auto;
+    background: transparent;
+    padding: 0;
   }
   .header-right .menu-item {
     padding-right: inherit;
@@ -906,8 +935,30 @@ a {
     text-align: left;
   }
 
+  /* mots réaffichés */
+  .header-right .menu-link b,
+  .header-right .menu-link u,
+  .header-right .menu-link span {
+    display: inline;
+  }
+
+  /* icônes masquées */
+  .header-right .menu-link svg,
+  .header-right .menu-link img {
+    display: none;
+  }
+  /* exceptions : mail icon + theme icons */
+  .menu-item:nth-last-child(2) svg,     /* envelope */
+  #theme-toggle svg {
+    /* sun + moon */
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+
   a,
   .navbar-brand {
+    position: static;
     display: inline-block; /* permet le transform */
     transition: transform 0.2s ease, color 0.2s ease;
   }
