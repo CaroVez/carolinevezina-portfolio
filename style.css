@@ -188,6 +188,7 @@ body.light .icon-moon {
 ul {
   display: flex;
   gap: 2.5rem;
+  margin-bottom: 0;
 }
 ul,
 a {
@@ -218,7 +219,7 @@ a {
 
 .header-right {
   position: fixed;
-  bottom: -1rem;
+  bottom: 0;
   left: 0;
   width: 100vw;
   background-color: var(--bg-color-dark);
@@ -229,10 +230,6 @@ a {
 }
 .header-right .menu-item {
   margin: 1rem 0;
-  padding-right: 1rem;
-}
-.header-right.active {
-  right: 0;
 }
 
 /* masquer les textes, garder les icônes */
@@ -294,7 +291,7 @@ a {
   font-size: 1rem;
 }
 .buttons {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
@@ -828,7 +825,7 @@ a {
 
   .presentation h1,
   .presentation-projet h1 {
-    padding: 9rem 0;
+    padding: 8rem 0;
   }
 
   .presentation .intro,
@@ -843,19 +840,22 @@ a {
   }
 
   .buttons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+  }
+  .contact {
+    display: none;
   }
   .buttons .button {
     margin-top: 0rem;
-    text-align: inherit;
     padding: 1rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
   }
   .buttons svg {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
   }
   .about .buttons {
     margin: 20vh 0 12vh 0;
@@ -869,7 +869,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     padding: 0 1rem;
     background-color: transparent;
   }
@@ -880,16 +880,11 @@ a {
     width: auto;
     display: flex;
     flex-direction: row;
-    padding: 0;
-    gap: 1.5rem;
+    gap: 3rem;
+    align-items: center;
   }
   .header-right .menu-item {
-    padding-right: inherit;
     cursor: pointer;
-    margin: 0 1rem 0 0;
-  }
-  .header-right.active {
-    right: inherit;
   }
   .header a.active:hover {
     color: var(--text-color-dark);

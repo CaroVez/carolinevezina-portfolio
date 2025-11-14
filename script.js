@@ -58,10 +58,6 @@ function toggleTheme(e) {
 
   // appliquer image + couleur en mobile
   applyHeaderMobileStyles(isLight);
-
-  // fermer le menu si ouvert
-  hamburger?.classList.remove("active");
-  navMenu?.classList.remove("active");
 }
 
 // click toggle
