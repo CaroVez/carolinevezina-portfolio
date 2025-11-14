@@ -189,6 +189,7 @@ ul {
   display: flex;
   gap: 2.5rem;
   margin-bottom: 0;
+  padding-left: 0;
 }
 ul,
 a {
@@ -290,7 +291,7 @@ a {
 .about p b {
   font-size: 1rem;
 }
-.buttons {
+.presentation .buttons {
   padding-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -298,7 +299,7 @@ a {
   width: fit-content;
   margin: auto;
 }
-.buttons .button {
+.presentation .buttons .button {
   background-color: #479796;
   color: var(--text-color-light);
   border: var(--text-color-light) solid 1px;
@@ -311,17 +312,20 @@ a {
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
   text-align: center;
 }
-.buttons .button b {
+.presentation .buttons .button b {
   font-family: "MuseoModerno-Black", "Century Gothic", "Segoe UI", Tahoma,
     Geneva, Verdana, sans-serif;
 }
-.buttons .button:hover {
+.presentation .buttons .button:hover {
   background-color: #ba7954;
   transform: translateY(2px);
 }
-.buttons svg {
+.presentation .buttons svg {
   height: 20px;
   width: 20px;
+}
+.presentation .buttons img {
+  display: none;
 }
 
 .presentation .arrows,
@@ -365,14 +369,44 @@ a {
 .icones {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
-  margin-top: 1rem;
-  margin-left: -2rem;
+  justify-content: center;
+  margin: 1rem 0;
 }
 .icones img,
 .icones li {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
+}
+.about .buttons {
+  padding: 0 0 5rem 0;
+}
+.about .buttons .button {
+  background-color: #479796;
+  color: var(--text-color-light);
+  border: var(--text-color-light) solid 1px;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
+    Verdana, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
+  text-align: center;
+}
+.about .buttons .button b {
+  font-family: "MuseoModerno-Black", "Century Gothic", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
+}
+.about .buttons .button:hover {
+  background-color: #ba7954;
+  transform: translateY(2px);
+}
+.about .buttons svg {
+  height: 20px;
+  width: 20px;
+}
+.about .buttons img {
+  display: none;
 }
 
 /* ##### PROJETS / SERVICES ##### */
@@ -839,7 +873,8 @@ a {
     font-size: 1.5rem;
   }
 
-  .buttons {
+  .presentation .buttons,
+  .about .buttons {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -847,18 +882,25 @@ a {
   .contact {
     display: none;
   }
-  .buttons .button {
+  .presentation .buttons .button,
+  .about .buttons .button {
     margin-top: 0rem;
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     text-align: center;
   }
-  .buttons svg {
+  .presentation .buttons svg,
+  .about .buttons svg {
     height: 20px;
     width: 20px;
   }
   .about .buttons {
     margin: 20vh 0 12vh 0;
+  }
+  .about .buttons img {
+    display: block;
+    height: 60px;
+    width: 60px;
   }
   .about {
     padding-top: 0;
