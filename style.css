@@ -294,9 +294,10 @@ a {
   font-size: 1rem;
 }
 .buttons {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
   width: fit-content;
   margin: auto;
 }
@@ -306,12 +307,11 @@ a {
   border: black solid 1px;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
-  margin-top: 2rem;
   text-align: center;
 }
 .buttons .button b {
@@ -323,8 +323,8 @@ a {
   transform: translateY(2px);
 }
 .buttons svg {
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
 }
 
 .presentation .arrows,
@@ -843,7 +843,7 @@ a {
   }
 
   .buttons {
-    flex-direction: inherit;
+    display: flex;
     justify-content: space-between;
     width: 100%;
   }
@@ -851,9 +851,11 @@ a {
     margin-top: 0rem;
     text-align: inherit;
     padding: 1rem 1.5rem;
+    font-size: 1.5rem;
   }
-  .buttons img {
-    display: block;
+  .buttons svg {
+    height: 24px;
+    width: 24px;
   }
   .about .buttons {
     margin: 20vh 0 12vh 0;
