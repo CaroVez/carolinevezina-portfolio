@@ -175,6 +175,8 @@ body.light .icon-moon {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--bg-color-dark);
+  height: 4rem;
 }
 .navbar-brand {
   color: #479796;
@@ -196,14 +198,7 @@ a {
   list-style-type: disc;
   margin-left: 5%;
 }
-.header .hamburger {
-  position: fixed;
-  top: 0.75rem;
-  right: 1.5rem;
-}
-.header .bar {
-  background-color: #479796;
-}
+
 li {
   list-style: none;
 }
@@ -221,31 +216,9 @@ a {
   color: #ba7954;
 }
 
-/* #### menu hamburger #### */
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #ba7954;
-}
-.hamburger {
-  display: none;
-}
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
 .header-right {
   position: fixed;
-  bottom: 0;
+  bottom: -1rem;
   left: 0;
   width: 100vw;
   background-color: var(--bg-color-dark);
@@ -885,13 +858,8 @@ a {
   .about .buttons {
     margin: 20vh 0 12vh 0;
   }
-
   .about {
     padding-top: 0;
-  }
-
-  .hamburger {
-    display: none;
   }
 
   .header {
@@ -901,24 +869,17 @@ a {
     justify-content: space-between;
     height: 80px;
     padding: 0 1rem;
+    background-color: transparent;
   }
 
   .header-right {
-    background-color: inherit;
-    background-image: inherit;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: transparent;
     position: static;
-    top: inherit;
-    right: inherit;
-    transition: inherit;
-    gap: 1.5rem;
-    text-align: inherit;
-    flex-direction: row;
     width: auto;
-    background: transparent;
+    display: flex;
+    flex-direction: row;
     padding: 0;
+    gap: 1.5rem;
   }
   .header-right .menu-item {
     padding-right: inherit;

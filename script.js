@@ -1,5 +1,4 @@
 // ########### SELECTEURS ########### //
-const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".header-right");
 const menuLinks = document.querySelectorAll(".menu-link");
 const toggleBtn = document.getElementById("theme-toggle");
@@ -11,33 +10,19 @@ if (!toggleBtn || !header) {
   console.warn("theme-toggle ou header introuvable");
 }
 
-// ########### BURGER MENU ########### //
-hamburger?.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-// fermer le menu quand on clique un lien
-menuLinks.forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger?.classList.remove("active");
-    navMenu?.classList.remove("active");
-  })
-);
-
 // ########### THEME LOGIC ########### //
 const MOBILE_BREAK = 1079;
 
 function applyHeaderMobileStyles(isLight) {
   // image mobile (change paths si besoin)
-  const headerImg = isLight ? "#e8e9ea" : "#474747";
+  const headerBg = isLight ? "#e8e9ea" : "#474747";
 
   // couleur .header-right mobile
   const headerRightBg = isLight ? "#e8e9ea" : "#474747";
 
   // n'affecte que si on est en mobile
   if (window.innerWidth <= MOBILE_BREAK) {
-    header.style.backgroundColor = headerImg;
+    header.style.backgroundColor = headerBg;
     navMenu.style.backgroundColor = headerRightBg;
   } else {
     // en desktop, restaure style inline (ne pas écraser les règles CSS desktop)
