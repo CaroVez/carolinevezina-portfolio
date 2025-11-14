@@ -437,10 +437,12 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: justify;
+  text-align: center;
 }
 .service h3 img {
   margin-right: 1rem;
+  height: 50px;
+  width: 50px;
 }
 .projet {
   display: flex;
@@ -469,6 +471,12 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.projet .site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .mtavie-vignette {
@@ -1012,6 +1020,9 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .projet .site {
+    display: none;
   }
 
   .figma {
