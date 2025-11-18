@@ -154,20 +154,21 @@ body.dark {
   transition: opacity var(--transition-time) ease;
 }
 
-/* Icône soleil visible par défaut (dark mode) */
-.icon-sun {
+/* Icône lune visible par défaut (light mode) */
+.icon-moon {
   opacity: 1;
 }
-/* Icône lune cachée par défaut */
-.icon-moon {
+
+/* Icône soleil masqué par défaut */
+.icon-sun {
   opacity: 0;
 }
 
-/* Quand on est en light mode */
-body.light .icon-sun {
+/* Quand on est en dark mode */
+body.dark .icon-moon {
   opacity: 0;
 }
-body.light .icon-moon {
+body.dark .icon-sun {
   opacity: 1;
 }
 
