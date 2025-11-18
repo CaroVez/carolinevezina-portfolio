@@ -13,12 +13,12 @@ if (!toggleBtn || !header) {
 // ########### THEME LOGIC ########### //
 const MOBILE_BREAK = 1079;
 
-function applyHeaderMobileStyles(isLight) {
+function applyHeaderMobileStyles(isDark) {
   // image mobile (change paths si besoin)
-  const headerBg = isLight ? "#f2f2f2" : "#494949";
+  const headerBg = isDark ? "#494949" : "#f2f2f2";
 
   // couleur .header-right mobile
-  const headerRightBg = isLight ? "#f2f2f2" : "#494949";
+  const headerRightBg = isDark ? "#494949" : "#f2f2f2";
 
   // n'affecte que si on est en mobile
   if (window.innerWidth <= MOBILE_BREAK) {
@@ -32,15 +32,15 @@ function applyHeaderMobileStyles(isLight) {
 }
 
 function applyThemeClassesFromStorage() {
-  // theme par défaut = dark
-  body.classList.add("dark-bg");
+  // theme par défaut = light
+  body.classList.add("light-bg");
   const saved = localStorage.getItem("theme");
-  if (saved === "light") {
-    body.classList.add("light", "light-bg");
-    body.classList.remove("dark-bg");
+  if (saved === "dark") {
+    body.classList.add("dark", "dark-bg");
+    body.classList.remove("light-bg");
   }
   // appliquer header mobile au chargement
-  applyHeaderMobileStyles(body.classList.contains("light"));
+  applyHeaderMobileStyles(body.classList.contains("dark"));
 }
 
 // appelle au chargement
@@ -49,15 +49,15 @@ applyThemeClassesFromStorage();
 // mettre à jour la UI et fermer le menu
 function toggleTheme(e) {
   if (e) e.preventDefault(); // car c'est un <a>
-  body.classList.toggle("light");
-  body.classList.toggle("light-bg");
+  body.classList.toggle("dark");
   body.classList.toggle("dark-bg");
+  body.classList.toggle("light-bg");
 
-  const isLight = body.classList.contains("light");
-  localStorage.setItem("theme", isLight ? "light" : "dark");
+  const isDark = body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 
   // appliquer image + couleur en mobile
-  applyHeaderMobileStyles(isLight);
+  applyHeaderMobileStyles(isDark);
 }
 
 // click toggle

@@ -111,28 +111,29 @@ h5 {
   --transition-time: 0.4s;
 }
 
+/* Light mode */
 body {
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
   transition: background-color var(--transition-time),
     color var(--transition-time);
 }
 /* Image en dark */
-body.dark-bg {
+body.dark.dark-bg {
   background: var(--bg-color-dark) url("images/bandeau_moy_small.png") no-repeat
     top center;
   background-size: cover;
   height: 100vh;
 }
 /* Image en light */
-body.light.light-bg {
+body.light-bg {
   background: var(--bg-color-light) url("images/bandeau_light_small.png")
     no-repeat top center;
   background-size: cover;
   height: 100vh;
 }
-/* Light mode */
-body.light {
-  color: var(--text-color-light);
+/* Dark mode */
+body.dark {
+  color: var(--text-color-dark);
 }
 
 /* ===== Bouton thème ===== */
@@ -175,8 +176,9 @@ body.light .icon-moon {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: var(--bg-color-dark);
+  background-color: var(--bg-color-light);
   height: 4rem;
+  border-bottom: #479796 solid 1px;
 }
 .navbar-brand {
   color: #479796;
@@ -223,11 +225,12 @@ a {
   bottom: 0;
   left: 0;
   width: 100vw;
-  background-color: var(--bg-color-dark);
-  padding: 0 0.5rem;
+  background-color: var(--bg-color-light);
+  padding: 0 0.5rem 1rem 0.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-top: #479796 solid 1px;
 }
 .header-right .menu-item {
   margin: 1rem 0;
@@ -249,7 +252,6 @@ a {
 
 /* ################################################# */
 .presentation,
-.contact,
 .about,
 .projets,
 .services {
@@ -299,13 +301,18 @@ a {
   width: fit-content;
   margin: auto;
 }
+.about-presentation .buttons {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
 .presentation .buttons .button {
   background-color: #479796;
   color: var(--text-color-light);
   border: var(--text-color-light) solid 1px;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
@@ -325,7 +332,8 @@ a {
   width: 20px;
 }
 .presentation .buttons img {
-  display: none;
+  height: 32px;
+  width: 32px;
 }
 
 .presentation .arrows,
@@ -404,9 +412,6 @@ a {
 .about .buttons svg {
   height: 20px;
   width: 20px;
-}
-.about .buttons img {
-  display: none;
 }
 
 /* ##### PROJETS / SERVICES ##### */
@@ -887,14 +892,11 @@ a {
     display: flex;
     justify-content: space-between;
   }
-  .contact {
-    display: none;
-  }
   .presentation .buttons .button,
   .about .buttons .button {
     margin-top: 0rem;
     padding: 1rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
   }
   .presentation .buttons svg,
@@ -902,13 +904,17 @@ a {
     height: 20px;
     width: 20px;
   }
+  .presentation .buttons .contact {
+    display: none;
+  }
   .about .buttons {
     margin: 20vh 0 12vh 0;
   }
+  .presentation .buttons img,
   .about .buttons img {
     display: block;
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
   }
   .about {
     padding-top: 0;
@@ -922,16 +928,19 @@ a {
     height: 70px;
     padding: 0 1rem;
     background-color: transparent;
+    border-bottom: none;
   }
 
   .header-right {
     background-color: transparent;
+    padding: 0 0.5rem;
     position: static;
     width: auto;
     display: flex;
     flex-direction: row;
     gap: 3rem;
     align-items: center;
+    border-top: none;
   }
   .header-right .menu-item {
     cursor: pointer;
