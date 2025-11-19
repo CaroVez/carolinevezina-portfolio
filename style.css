@@ -43,7 +43,7 @@ a u,
 /* ########### titre principal ########### */
 h1 {
   font-size: 1.75rem;
-  color: #ba7954;
+  color: var(--gold);
   font-weight: bold;
 }
 h1 span.code {
@@ -57,7 +57,7 @@ h1 span.code {
 .typewriter {
   display: inline-block;
   overflow: hidden;
-  border-right: 2px solid #fff; /* curseur */
+  border-right: 2px solid var(--text-color-dark); /* curseur */
   white-space: nowrap;
   animation: typing 2s steps(20, end), blink 1s step-end infinite;
 }
@@ -97,7 +97,7 @@ h4 {
 h5 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ba7954;
+  color: var(--gold);
   margin-bottom: 1.5rem;
 }
 
@@ -109,6 +109,8 @@ h5 {
   --text-color-dark: rgb(240, 240, 240);
   --text-color-light: rgb(10, 10, 10);
   --transition-time: 0.4s;
+  --turquoise: #479796;
+  --gold: #ba7954;
 }
 
 /* Light mode */
@@ -179,10 +181,10 @@ body.dark .icon-sun {
   align-items: flex-start;
   background-color: var(--bg-color-light);
   height: 4rem;
-  border-bottom: #479796 solid 1px;
+  border-bottom: var(--turquoise) solid 1px;
 }
 .navbar-brand {
-  color: #479796;
+  color: var(--turquoise);
   position: fixed;
   top: 0.5rem;
   left: 1rem;
@@ -208,7 +210,7 @@ li {
   list-style: none;
 }
 a {
-  color: #479796;
+  color: var(--turquoise);
   text-decoration: none;
 }
 .menu-link {
@@ -218,7 +220,7 @@ a {
   width: 16px;
 }
 .header a.active {
-  color: #ba7954;
+  color: var(--gold);
 }
 
 .header-right {
@@ -231,7 +233,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: #479796 solid 1px;
+  border-top: var(--turquoise) solid 1px;
 }
 .header-right .menu-item {
   margin: 1rem 0;
@@ -308,7 +310,7 @@ a {
   justify-content: space-between;
 }
 .presentation .buttons .button {
-  background-color: #479796;
+  background-color: var(--turquoise);
   color: var(--text-color-light);
   border: var(--text-color-light) solid 1px;
   border-radius: 5px;
@@ -325,7 +327,7 @@ a {
     Geneva, Verdana, sans-serif;
 }
 .presentation .buttons .button:hover {
-  background-color: #ba7954;
+  background-color: var(--gold);
   transform: translateY(2px);
 }
 .presentation .buttons svg {
@@ -343,7 +345,7 @@ a {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.4rem;
-  color: #ba7954;
+  color: var(--gold);
   margin-top: 4.5rem;
 }
 .arrows svg {
@@ -390,7 +392,7 @@ a {
   padding: 0 0 5rem 0;
 }
 .about .buttons .button {
-  background-color: #479796;
+  background-color: var(--turquoise);
   color: var(--text-color-light);
   border: var(--text-color-light) solid 1px;
   border-radius: 5px;
@@ -407,7 +409,7 @@ a {
     Geneva, Verdana, sans-serif;
 }
 .about .buttons .button:hover {
-  background-color: #ba7954;
+  background-color: var(--gold);
   transform: translateY(2px);
 }
 .about .buttons svg {
@@ -428,7 +430,7 @@ a {
 }
 .service {
   color: var(--text-color-light);
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 5px;
   border: solid 1px var(--text-color-light);
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 0px;
@@ -547,7 +549,7 @@ a {
 }
 .wrapper-projet .presentation-projet .first-p,
 .wrapper-projet .presentation-projet .first-p b {
-  color: #ba7954;
+  color: var(--gold);
   font-size: 1.25rem;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
     Verdana, sans-serif;
@@ -561,9 +563,9 @@ a {
   grid-column: 1 / 5;
   grid-row: 2;
   text-align: center;
-  border-bottom: 1px solid #ba7954;
+  border-bottom: 1px solid var(--gold);
   padding-bottom: 2vh;
-  border-top: 1px solid #ba7954;
+  border-top: 1px solid var(--gold);
   padding-top: 2vh;
 }
 .wrapper-projet img {
@@ -574,7 +576,7 @@ a {
   object-fit: inherit;
 }
 .wrapper-projet .text p {
-  color: #ba7954;
+  color: var(--gold);
   font-size: 1.25rem;
   text-align: center;
   font-family: "MuseoModerno", "Century Gothic", "Segoe UI", Tahoma, Geneva,
@@ -626,7 +628,7 @@ a {
   grid-row: 4;
 }
 .terre .moodboard img {
-  border: solid 1px #1a3b3a;
+  border: solid 1px var(--bg-color-dark);
 }
 .terre .logos-text {
   grid-column: 1 / 5;
@@ -984,7 +986,7 @@ a {
   a:hover,
   a svg:hover,
   .navbar-brand:hover {
-    color: #ba7954;
+    color: var(--gold);
     transform: translateY(2px);
   }
 
@@ -1116,7 +1118,7 @@ a {
   .wrapper-projet .description {
     grid-column: 2 / 5;
     grid-row: 1;
-    color: #ba7954;
+    color: var(--gold);
   }
   .wrapper-projet .description .first-p {
     border-top: inherit;
